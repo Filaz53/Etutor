@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css');
+:root{
+    --font-title:'VT323';
+    --font: 'Ubuntu';
+    /*DARKMODE*/
+
+    --background: #1e1e1e;
+    --div-back: rgb(14, 14, 14);
+    --div-back-r:14;
+
+    
+    --color1: rgb(34, 34, 34);
+
+    --darkgreen:rgb(35, 62, 33);
+    --darkgreen-r:35;
+    --darkgreen-g: 62;
+    --darkgreen-b: 33;
+    --green:#37c42b;
+
+    --green-agen:rgb(35, 62, 33);
+
+    --text-color:white;
+    
+    --font_title: 
+}
+body{
+    background-color: var(--background);
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#container{
+    background-color: var(--div-back);
+    width: 100%;
+    position: relative;
+    border-radius: 150px;
+    height: 150%;
+    top: 10%;
+    
+}
+#TITLE{
+    display: flex;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    position: relative;
+}
+#TITLE span{
+    font-size: 60px;
+    color: var(--text-color);
+}
+#TITLE span#eletronic{
+    font-size: 60px;
+    color: var(--green);
+}
+#downlogin{
+    height: 200px;
+    width: calc(100% + 20px);
+    background-color: transparent;
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+
+}
+#upospite{
+    height: 200px;
+    width: calc(100% + 20px);
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+
+}
+#rightregister{
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    right: -150px;
+    top: 0px;
+    cursor: pointer;
+
+}
+#leftlogin{
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    left: -150px;
+    top: 0px;
+    cursor: pointer;
+
+}
+#accesso{
+    width: 200%;
+    height: 110%;
+    top: -10%;
+    position: absolute;
+    display: flex;
+    right: -100%;
+    justify-content: space-around;
+}
+.register{
+    
+    display: flex;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+}
+#login {
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+/*---------------------------------------*/
+
+.input {
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 55px 37px 55px;
+  }
+
+  
+div.inputitem {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .inp::before {
+    content: "";
+    display: block;
+    position: relative;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: #fff;
+  }
+  
+  .inp::after {
+    font-family: Material-Design-Iconic-Font;
+    font-size: 22px;
+    color: #fff;
+  
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -45px;
+    left: -20px;
+    padding-left: 5px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  div.input:focus {
+    padding-left: 5px;
+  }
+  
+  div.input:focus + .inputitem::after {
+    top: -22px;
+    font-size: 18px;
+  }
+  
+  .input:focus + .inputitem::before {
+    width: 100%;
+  }
+  
+  .has-val.input + .inputitem::after {
+    top: -22px;
+    font-size: 18px;
+  }
+  
+  .has-val.input + .inputitem::before {
+    width: 100%;
+  }
+  
+  .has-val.input {
+    padding-left: 5px;
+  }
+  form{
+    width: 200px;
+    margin: auto;
+    padding: 30px;
+    background-color: var(--background);
+    border-radius: 30px;
+  }
+  .mdi-account-outline{
+    color: white;
+    position: relative;
+    top: -20px;
+    left: -25px;
+    font-size: 20px;
+  }
+ .mdi-key{
+    color: white;
+    position: relative;
+    top: 30px;
+    left: -25px;
+    font-size: 20px;
+    rotate: 15deg;
+  }
+  input{
+    background-color: transparent;
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+    font-size: larger;
+    border: 1px solid white;
+  }
+  .labe{
+    position: relative;
+    top: -5px;
+    padding-bottom: 5px;
+    color: white;
+    font-family: Ubuntu;
+  }
+  .labe1{
+    position: relative;
+    top: 15px;
+    left: -30px;
+    padding-bottom: 5px;
+    color: white;
+    font-family: Ubuntu;
+  }
+ .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.arrow span {
+    display: block;
+    width: 1vw;
+    height: 1vw;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -13px;
+    animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+
+
+#arrow1 {
+  top: 5%;
+  transform: rotate(180deg);
+  left: calc((100% )/2 - 0.13vw);
+}
+#arrow2 {
+  transform: rotate(0deg);
+  right: calc((100%)/2 - 1vw);;
+}
+#arrow3 {
+  transform: rotate(270deg);
+  left: calc(100% + 10%);
+  top: 50%;
+}
+#arrow4 {
+  transform: rotate(90deg);
+  left: -5%;
+  bottom: 50%;
+}
+.comment{
+  width: 150px;
+  text-align: center;
+  margin: 0px calc(50% - 85px);
+  vertical-align:middle;
+  position: relative;
+  bottom: -15em;
+  color: white;
+}
+.line{
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background-color: wheat;
+  z-index: 100;
+  left: calc((100% - 2px )/ 2);
+}

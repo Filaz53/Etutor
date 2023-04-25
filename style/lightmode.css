@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=VT323&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu&display=swap);
+:root{
+    --font-title:'VT323';
+    --font: 'Ubuntu';
+    /*DARKMODE*/
+    --background: #f0f0f0;
+    --div-back: rgb(228, 228, 228);
+    --div-back-r:228;
+
+    
+    --color1: rgb(134, 134, 134);
+
+    --darkgreen:rgb(35, 62, 33);
+    --darkgreen-r:35;
+    --darkgreen-g: 62;
+    --darkgreen-b: 33;
+    --green:#508F4A;
+
+    --green-agen:rgb(35, 62, 33);
+
+    --text-color:white;
+}
+*{
+    transition: all 1s;
+}
