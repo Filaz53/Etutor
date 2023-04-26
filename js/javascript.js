@@ -29,7 +29,7 @@ function downlogin(){
     document.getElementById("downlogin").style.top = "100%"
     document.getElementById("rightregister").style.right = "0px"
     document.getElementById("accesso").style.top = "0%"
-    window.setTimeout(document.getElementById("login").style.opacity = "100", 1000);
+    window.setTimeout(document.getElementById("login").style.opacity = "1", 1000);
     typeWriter();
     document.getElementById("arrow2").style.top = "90%"
     setTimeout('document.getElementById("arrow3").style.left = "calc(100% - 5%)"', 700);
