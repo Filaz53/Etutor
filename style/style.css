@@ -100,15 +100,15 @@ body{
     right: -100%;
     justify-content: space-around;
 }
-.register{
-    
-    display: flex;
-    top: 0px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-
+#register {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-around;
 }
 #login {
     opacity: 0;
