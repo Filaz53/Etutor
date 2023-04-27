@@ -100,26 +100,65 @@ body{
     right: -100%;
     justify-content: space-around;
 }
-#register {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
+#box1{
   position: relative;
+  top: -0.3em;
+  right: 4.4em;
+}
+#terms1{
+  position: relative;
+  top: -0.8em;
+  right: 9.5em;
+}
+#box2{
+  position: relative;
+  top: -1em;
+  right: 4.3em;
+}
+.button_signin{
+  position: relative;
+  top: 1em;
+}
+.recupera{
+  position: relative;
+  top: 1em;
+}
+#register{
+  position: relative;
+  width: 30em;
+  height: 26em;
+  top: 21.9em;
+  background-color: inherit;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
   align-content: space-around;
+  border-radius: 3em;
 }
-#login {
-    opacity: 0;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    position: relative;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    align-content: space-around;
+#form_reg{
+  height: 90%;
+  border-radius: 3em;
+  width: 65%;
+}
+#login{
+  opacity: 0;
+  position: relative;
+  width: 30em;
+  height: 30em;
+  top: 20em;
+  background-color: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-around;
+  border-radius: 3em;
+}
+#form_log{
+  height: 80%;
+  border-radius: 3em;
+  width: 65%;
 }
 
 /*---------------------------------------*/
@@ -328,4 +367,120 @@ div.inputitem {
   background-color: wheat;
   z-index: 100;
   left: calc((100% - 2px )/ 2);
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1e1e1e;
+}
+
+h2{
+  text-align: center;
+  color: #37c42b;;
+  font-size: 2em;
+  font-family: 'VT323';
+}
+
+input:focus ~ label,
+input:valid ~ label{
+  top: -5px;
+}
+
+.inputbox{
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+  font-family: 'Ubuntu';
+}
+
+.inputbox label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transition: .5s;
+  font-family: 'Ubuntu';
+}
+
+.inputbox input{
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 5px 5px;
+  color: #fff;
+}
+
+.inputbox ion-icon{
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  top: 18px;
+}
+
+button{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  border-color: #fff;
+  font-family: 'Ubuntu';
+}
+
+.ricordami{
+  position: relative;
+  font-size: 1.05em;
+  color: #fff;
+  font-family: 'Ubuntu';
+}
+
+.recupera{
+  text-align: center;
+  font-size: 1.1em;
+  color: #fff;
+  margin-top: 25px;
+  font-family: 'Ubuntu';
+}
+
+.recupera span a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.recupera span a:hover{
+  text-decoration: underline;
+}
+
+.register{
+  text-align: center;
+  font-size: 1.1em;
+  color: #fff;
+  margin-top: 20px;
+  font-family: 'Ubuntu';
+}
+
+.register p a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.register p a:hover{
+  text-decoration: underline;
 }

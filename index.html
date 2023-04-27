@@ -5,7 +5,6 @@
         <script src="js/javascript.js"></script>
     </head>
     <body>
-        <!--IL POLLO ALLA -->
     <div class="line"></div>
        <div id="container">
         <div id="arrow1" class="arrow">
@@ -31,44 +30,70 @@
             <div id="TITLE">
                 <span id="Eletronic">E</span><span>Tutor</span><span id="tutor"></span>
             </div>
-            <div id="accesso"><div id="login">
-                <form action="pages/main.html" method="post">
-                    <div class="itemimp">                        
-                        <label class="labe">UserName</label><br>
-                        <input class="input-bar" type="text" placeholder="username" name="username"><br>
-                        <span class="mdi mdi-account-outline"></span>
-                        <label class="labe1">Password</label><br>
-                        <span data-placeholder="" class="inp"></span>
-                        <span class="mdi mdi-key"></span>
-                        <div class="button"></div>
-                    </div>
-                    <div class="itemimp"> 
-                        <input type="password" placeholder="password" name="psw">
-                    </div>
-                </form>
-            </div>
+            <div id="accesso">
+                <div id="login"> 
+                    <form id="form_log" action="login">
+            
+                      <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required> 
+                        <label>Email</label>
+                      </div>
+            
+                      <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="psw" required>
+                        <label>Password</label>
+                      </div>
+            
+                      <div class="ricordami">
+                        <input type="checkbox" id="box1" checked="checked" name="remember"><label id="terms1">Ricordami</label> 
+                      </div>
+            
+                      <div class="button_signin">
+                        <button type="submit">Sign in</button>
+                      </div>
+            
+                      <div class="recupera">
+                        <span class="psw">Hai dimanticato la password? <a href="#">Recupera</a></span>
+                      </div>
+            
+                    </form>
+                </div>
+
                 <div id="register">
-                    <form id="form_reg" action="pages/main.html" method="post">
-                        <div class="itemimp">                        
-                            <label class="labe">Username</label><br>
-                            <input class="input-bar" type="text" placeholder=" Username" name="username"><br>
-                            <span class="mdi mdi-account-outline"></span>
-                            <label class="labe1">Password</label><br>
-                            <span data-placeholder="" class="inp"></span>
-                            <span class="mdi mdi-key"></span>
+                    <form id="form_reg" action="">
+            
+                        <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required> 
+                        <label>Email</label>
                         </div>
-                        <div class="itemimp"> 
-                            <input type="password" placeholder=" Password" name="psw">
+            
+                        <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="psw" required>
+                        <label>Password</label>
                         </div>
-                        <div class="itemimp">
-                            <label class="labe1" id="label1">Conferma password</label><br>
-                            <span data-placeholder="" class="inp"></span>
-                            <span class="mdi mdi-key"></span> 
-                            <input type="password" placeholder=" Conferma Password" name="psw">
+            
+                        <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="psw" required>
+                        <label>Ripeti password</label>
+                        </div>
+            
+                        <div class="ricordami">
+                            <input type="checkbox" id="box2" checked="checked" name="remember">
+                          </div>
+            
+                        <div class="button_reg">
+                        <button type="submit">Registra</button>
                         </div>
                     </form>
-                    
                 </div>
+            
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
             </div>
         </div>
        <div id="upospite" onclick="upospite()">

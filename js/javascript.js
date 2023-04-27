@@ -84,4 +84,3 @@ function leftlogin(){
     setTimeout('document.getElementById("tutor").innerHTML = "Logi"', 1040);
     setTimeout('document.getElementById("tutor").innerHTML = "Login"', 1120);
 }
-
