@@ -113,7 +113,7 @@ body{
 #box2{
   position: relative;
   top: -4.5em;
-  right: 4.3em;
+  right: 5.3em;
 }
 .button_signin{
   position: relative;
@@ -121,7 +121,7 @@ body{
 }
 .button_reg{
   position: relative;
-  top: -4.5em;
+  top: -4em;
 }
 .recupera{
   position: relative;
@@ -146,16 +146,40 @@ body{
   border-radius: 3em;
   width: 65%;
 }
-#ins_classe{
+
+#my-dropdown{
+  font-size: 1.2em;
+  height: 1.5em;
   position: relative;
-  top: -17.25em;
+  top: -11.5em;
+  width: 47%;
+  background-color: var(--background);
+  color: white;
   float: right;
+  border: 0.1em solid white;
+  border-radius: 1em;
 }
-#ins_sez{
+#my-dropdown2{
+  font-size: 1.2em;
+  height: 1.5em;
   position: relative;
-  top: -10.25em;
-  left: 21em;
+  top: -8.8em;
+  width: 47%;
+  background-color: var(--background);
+  color: white;
+  float: right;
+  border: 0.1em solid white;
+  border-radius: 1em;
 }
+
+#hide{
+  opacity: 0;
+}
+
+#hide2{
+  opacity: 0;
+}
+
 #login{
   opacity: 0;
   position: relative;

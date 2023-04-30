@@ -34,11 +34,11 @@ function downlogin(){
     document.getElementById("arrow2").style.top = "90%"
     setTimeout('document.getElementById("arrow3").style.left = "calc(100% - 5%)"', 700);
 
-
 }
 function upospite(){
     window.location.href='../pages/main'
 }
+
 var space=0;
 function rightregister(){
     document.getElementById("accesso").style.right = "0%"
@@ -84,3 +84,19 @@ function leftlogin(){
     setTimeout('document.getElementById("tutor").innerHTML = "Logi"', 1040);
     setTimeout('document.getElementById("tutor").innerHTML = "Login"', 1120);
 }
+
+const dropdown = document.getElementById("my-dropdown");
+const input = document.getElementById("hide");
+
+dropdown.addEventListener("change", function() {
+  const selectedOption = dropdown.options[dropdown.selectedIndex].value;
+  input.value = selectedOption;
+});
+
+const dropdown2 = document.getElementById("my-dropdown2");
+const input2 = document.getElementById("hide2");
+
+dropdown2.addEventListener("change", function() {
+  const selectedOption = dropdown2.options[dropdown2.selectedIndex].value;
+  input2.value = selectedOption;
+});
