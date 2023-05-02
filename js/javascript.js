@@ -100,3 +100,32 @@ dropdown2.addEventListener("change", function() {
   const selectedOption = dropdown2.options[dropdown2.selectedIndex].value;
   input2.value = selectedOption;
 });
+
+
+
+function Show()
+{
+  if(document.getElementById('password').type == 'password')
+    {document.getElementById('password').type = 'text'}
+  else
+  document.getElementById('password').type = 'password'
+}
+function REShow()
+{
+  if(document.getElementById('REpassword').type == 'password')
+    {document.getElementById('REpassword').type = 'text'}
+  else
+  document.getElementById('REpassword').type = 'password'
+}
+function LOGINShow()
+{
+  if(document.getElementById('Lpassword').type == 'password')
+    {document.getElementById('Lpassword').type = 'text'}
+  else
+  document.getElementById('Lpassword').type = 'password'
+  if(document.getElementById('Lucchetto').name == "lock-open-outline")
+  {document.getElementById('Lucchetto').name = "lock-closed-outline"}
+  else
+  {document.getElementById('Lucchetto').name = "lock-open-outline"}
+
+}

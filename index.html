@@ -31,18 +31,19 @@
                 <span id="Eletronic">E</span><span>Tutor</span><span id="tutor"></span>
             </div>
             <div id="accesso">
+<!--LOGIN-->
                 <div id="login"> 
                     <form id="form_log" action="login">
             
                       <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required> 
+                        <input type="email" pattern="@aldini.istruzioneer.com" required> 
                         <label>Email</label>
                       </div>
             
                       <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="psw" required>
+                        <ion-icon name="lock-closed-outline" id="Lucchetto" onclick="LOGINShow()"></ion-icon>
+                        <input id="Lpassword" type="password" name="psw" required>
                         <label>Password</label>
                       </div>
             
@@ -60,7 +61,7 @@
             
                     </form>
                 </div>
-
+<!--REGISTRAZIONE-->
                 <div id="register">
                     <form id="form_reg" action="">
             
@@ -69,16 +70,17 @@
                         <input type="email" required> 
                         <label>Email</label>
                         </div>
-            
+            <!--password-->
                         <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="psw" required>
+                        <ion-icon name="lock-closed-outline" onclick="Show()"></ion-icon>
+                        <input id="password" type="password" name="psw" required>
                         <label>Password</label>
                         </div>
             
+            <!--REpassword-->
                         <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="psw" required>
+                        <ion-icon name="lock-closed-outline" onclick="REShow()"></ion-icon>
+                        <input id="REpassword" type="password" name="psw" required>
                         <label>Ripeti password</label>
                         </div>
 
