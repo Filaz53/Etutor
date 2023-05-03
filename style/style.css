@@ -201,6 +201,67 @@ body{
   width: 65%;
 }
 
+#T{
+  position: absolute;
+  top: 0;
+  padding: 2em 0em 2em 1em;
+}
+#electronic{
+  font-size: 4em;
+  color: var(--green);
+}
+#tutor{
+  font-size: 4em;
+  color: white;
+}
+#h_link{
+  font-size: 1.5em;
+  color: white;
+  position: relative;
+  left: 38em
+}
+
+#index{
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  position: relative;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 1em;
+
+}
+
+#head{
+  position: relative;
+  top: -3em;
+}
+
+.container_Termini{
+  color: white;
+  font-size: 1.2em;
+  margin: 5em;
+}
+
+.corpo{
+  text-align: center;
+}
+
+.sub_sub{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#spazio{
+  background-color: var(--background);
+}
+
+
+#subhead{
+  font-size: 2em;
+}
+
 /*---------------------------------------*/
 
 .input {
