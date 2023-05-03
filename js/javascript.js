@@ -36,7 +36,7 @@ function downlogin(){
 
 }
 function upospite(){
-    window.location.href='../pages/main'
+    window.location.href='pages/main.html'
 }
 
 var space=0;

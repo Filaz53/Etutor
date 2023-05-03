@@ -50,6 +50,7 @@ body{
 #TITLE span{
     font-size: 60px;
     color: var(--text-color);
+    z-index: 10;
 }
 #TITLE span#eletronic{
     font-size: 60px;
@@ -400,15 +401,6 @@ div.inputitem {
   bottom: -15em;
   color: white;
 }
-.line{
-  width: 2px;
-  height: 100%;
-  position: absolute;
-  background-color: wheat;
-  z-index: 100;
-  left: calc((100% - 2px )/ 2);
-}
-
 section{
   display: flex;
   justify-content: center;
