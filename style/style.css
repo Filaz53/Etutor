@@ -1,29 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css');
-:root{
-    --font-title:'VT323';
-    --font: 'Ubuntu';
-    /*DARKMODE*/
 
-    --background: #1e1e1e;
-    --div-back: rgb(14, 14, 14);
-    --div-back-r:14;
-
-    --color1: rgb(34, 34, 34);
-
-    --darkgreen:rgb(35, 62, 33);
-    --darkgreen-r:35;
-    --darkgreen-g: 62;
-    --darkgreen-b: 33;
-    --green:#37c42b;
-    
-    --green-agen:rgb(35, 62, 33);
-
-    --text-color:white;
-    
-    --font_title: 
-}
 body{
     background-color: var(--background);
     margin: 0px;

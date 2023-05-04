@@ -5,6 +5,7 @@
     --font: 'Ubuntu';
     /*DARKMODE*/
 
+    --maintransparent: rgba(22, 22, 22, 0.644);
     --background: #1e1e1e;
     --div-back: rgb(14, 14, 14);
     --div-back-r:14;
