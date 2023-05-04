@@ -201,6 +201,11 @@ body{
   width: 65%;
 }
 
+h4{
+  color: var(--green);
+  font-size: 1.3em;
+}
+
 #T{
   position: absolute;
   top: 0;
@@ -218,7 +223,7 @@ body{
   font-size: 1.5em;
   color: white;
   position: relative;
-  left: 38em
+  left: 250%;
 }
 
 #index{
@@ -231,6 +236,10 @@ body{
   text-align: center;
   font-size: 1em;
 
+}
+
+#interno{
+  text-align: left;
 }
 
 #head{
