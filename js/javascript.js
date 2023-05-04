@@ -85,24 +85,6 @@ function leftlogin(){
     setTimeout('document.getElementById("tutor").innerHTML = "Login"', 1120);
 }
 
-const dropdown = document.getElementById("my-dropdown");
-const input = document.getElementById("hide");
-
-dropdown.addEventListener("change", function() {
-  const selectedOption = dropdown.options[dropdown.selectedIndex].value;
-  input.value = selectedOption;
-});
-
-const dropdown2 = document.getElementById("my-dropdown2");
-const input2 = document.getElementById("hide2");
-
-dropdown2.addEventListener("change", function() {
-  const selectedOption = dropdown2.options[dropdown2.selectedIndex].value;
-  input2.value = selectedOption;
-});
-
-
-
 function Show()
 {
   if(document.getElementById('password').type == 'password')
