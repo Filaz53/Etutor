@@ -182,51 +182,32 @@ h4{
   font-size: 1.3em;
 }
 
-#T{
-  position: absolute;
-  top: 0;
-  padding: 2em 0em 2em 1em;
-}
-#electronic{
-  font-size: 4em;
-  color: var(--green);
-}
-#tutor{
-  font-size: 4em;
-  color: white;
-}
-#h_link{
-  font-size: 1.5em;
-  color: white;
-  position: relative;
-  left: 250%;
-}
 
 #index{
   text-transform: uppercase;
-  text-decoration: none;
   list-style: none;
   position: relative;
   width: 50%;
   margin: auto;
   text-align: center;
   font-size: 1em;
+}
 
+#index a{
+  text-decoration: none;
+  color: #37c42b;
 }
 
 #interno{
   text-align: left;
 }
 
-#head{
-  position: relative;
-  top: -3em;
-}
-
 .container_Termini{
   color: white;
   font-size: 1.2em;
-  margin: 5em;
+  padding: 3em;
+  margin-top: 2em;
+  background-color: var(--div-back);
 }
 
 .corpo{
@@ -245,6 +226,8 @@ h4{
 
 #subhead{
   font-size: 2em;
+  position: relative;
+  top: -5em;
 }
 
 /*---------------------------------------*/
