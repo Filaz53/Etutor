@@ -21,33 +21,16 @@ if (k < Register.length) {
 }
 }
 
-
 function downlogin(){
-    document.getElementById("container").style.top = "-200px";
-    document.getElementById("TITLE").style.top = "10%"
-    document.getElementById("upospite").style.top = "-100%"
-    document.getElementById("downlogin").style.top = "100%"
-    document.getElementById("rightregister").style.right = "0px"
-    document.getElementById("accesso").style.top = "0%"
-    window.setTimeout(document.getElementById("login").style.opacity = "1", 1000);
-    typeWriter();
-    document.getElementById("arrow2").style.top = "90%"
-    setTimeout('document.getElementById("arrow3").style.left = "calc(100% - 5%)"', 700);
-
-}
-function upospite(){
-    window.location.href='pages/main.html'
+  document.getElementById('container').style.top = "calc(-100% + 5em)";
+  document.getElementById('TITLE').style.top = "100%";
+  document.getElementById('login-register').style.opacity = "0";
+  document.getElementById('login-register').style.top = "100%";
+  typeWriter();
 }
 
 var space=0;
-function rightregister(){
-    document.getElementById("accesso").style.right = "0%"
-    document.getElementById("leftlogin").style.left = "0px"
-    document.getElementById("rightregister").style.right = "-150px"
-    document.getElementById("arrow4").style.left = "5%"
-    document.getElementById("arrow3").style.left =   "calc(100% + 10%)";
-    
-    
+function rightregister(){    
     setTimeout('document.getElementById("tutor").innerHTML = "Logi"', 160);
     setTimeout('document.getElementById("tutor").innerHTML = "Log"', 240);
     setTimeout('document.getElementById("tutor").innerHTML = "Lo"', 320);
@@ -64,12 +47,6 @@ function rightregister(){
     
 }
 function leftlogin(){
-    document.getElementById("accesso").style.right = "-100%"
-    document.getElementById("rightregister").style.right = "0px"
-    document.getElementById("leftlogin").style.left = "-150px"
-    document.getElementById("arrow3").style.left =   "calc(100% - 5%)";
-    document.getElementById("arrow4").style.left = "-5%"
-    
     setTimeout('document.getElementById("tutor").innerHTML = "Registe"', 160);
     setTimeout('document.getElementById("tutor").innerHTML = "Regist"', 240);
     setTimeout('document.getElementById("tutor").innerHTML = "Regis"', 320);
@@ -84,6 +61,10 @@ function leftlogin(){
     setTimeout('document.getElementById("tutor").innerHTML = "Logi"', 1040);
     setTimeout('document.getElementById("tutor").innerHTML = "Login"', 1120);
 }
+
+
+
+
 
 function Show()
 {
@@ -110,4 +91,14 @@ function LOGINShow()
   else
   {document.getElementById('Lucchetto').name = "lock-open-outline"}
 
+}
+function controllo(){
+  var Email = document.getElementById('email').value;
+  if(Email == 0)
+  {
+    document.getElementById('email-label').style.top = "50%"
+  }
+  else{
+    document.getElementById('email-label').style.top = "-5px"
+  }
 }

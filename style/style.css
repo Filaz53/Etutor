@@ -468,9 +468,7 @@ input:valid ~ label{
   pointer-events: none;
   transition: .5s;
   font-family: 'Ubuntu';
-}
-
-.inputbox input{
+}.inputbox input{
   width: 100%;
   height: 50px;
   background: transparent;

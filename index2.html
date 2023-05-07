@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style/darkmode.css">
+        <link rel="stylesheet" href="style/style2.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="top">
+                <div id="TITLE">
+                    <span id="Eletronic">e</span><span>Tutor</span><span id="tutor"></span>
+                </div>
+                <div id="login-register" onclick="downlogin()">
+                    <div id="text-login">
+                        <span>CLICCA PER REGISTRARTI</span>
+                    </div>
+                    <div id="arrow1" class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">
+                <div id="accesso">
+                    <!--LOGIN-->
+                                    <div id="login"> 
+                                        <form id="form_log" action="login">
+                                
+                                          <div class="inputbox">
+                                            <ion-icon name="mail-outline"></ion-icon>
+                                            <input id="email" value="" type="email" pattern=".+@aldini.istruzioneer.it" onfocusout="controllo()" required> 
+                                            <label id="email-label">Email</label>
+                                          </div>
+                                
+                                          <div class="inputbox">
+                                            <ion-icon name="lock-closed-outline" id="Lucchetto" onclick="LOGINShow()"></ion-icon>
+                                            <input id="Lpassword" type="password" name="psw" required>
+                                            <label>Password</label>
+                                          </div>
+                                
+                                          <div class="ricordami">
+                                            <input type="checkbox" id="box1" checked="checked" name="remember"><label id="terms1">Ricordami</label> 
+                                          </div>
+                                
+                                          <div class="button_signin">
+                                            <button type="submit">Sign in</button>
+                                          </div>
+                                
+                                          <div class="recupera">
+                                            <span class="psw">Hai dimanticato la password? <a href="#">Recupera</a></span>
+                                          </div>
+                                
+                                        </form>
+                                    </div>
+                    <!--REGISTRAZIONE-->
+                                    <div id="register">
+                                        <form id="form_reg" action="pages/main.html" >
+                                            <div class="inputbox">
+                                            <ion-icon name="mail-outline"></ion-icon>
+                                            <input type="email" required> 
+                                            <label>Email</label>
+                                            </div>
+                                <!--password-->
+                                            <div class="inputbox">
+                                            <ion-icon name="lock-closed-outline" onclick="Show()"></ion-icon>
+                                            <input id="password" type="password" name="psw" required>
+                                            <label>Password</label>
+                                            </div>
+                                
+                                <!--REpassword-->
+                                            <div class="inputbox">
+                                            <ion-icon name="lock-closed-outline" onclick="REShow()"></ion-icon>
+                                            <input id="REpassword" type="password" name="psw" required>
+                                            <label>Ripeti password</label>
+                                            </div>
+                    
+                                            <input id="hide" type="text" name="classe" required>
+                                            <select name="classe" id="my-dropdown">
+                                              <option value="option1">1° Superiore</option>
+                                              <option value="option2">2° Superiore</option>
+                                              <option value="option3">3° Superiore</option>
+                                              <option value="option4">4° Superiore</option>
+                                              <option value="option5">5° Superiore</option>
+                                            </select>
+                    
+                                            <input id="hide2" type="text" name="sezione" required>
+                                              <select id="my-dropdown2">
+                                                <option value="option1">Chimica, materiali e biotecnologie</option>
+                                                <option value="option2">Informatica e telecommunicazioni</option>
+                                                <option value="option3">Elettronica ed elettrotecnica</option>
+                                                <option value="option4">Grafica e communicazione</option>
+                                                <option value="option5">Meccanica, Meccatronica ed Energia</option>
+                                              </select>
+                                
+                                            <div class="ricordami" id="box2">
+                                                <input type="checkbox" checked="checked" name="remember">
+                                              </div>
+                                
+                                            <div class="button_reg">
+                                            <button type="submit">Registra</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                
+                                    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                                    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                                </div>
+                                <div id="scroll">
+                                    <div id="left">
+                                        
+                                    <div id="arrow1" class="arrow">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    </div>
+                                    <div id="middle"></div>
+                                    <div id="right">
+                                        
+                                    <div id="arrow1" class="arrow">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    </div>
+                                </div>
+            </div>
+        </div>
+        <script src="js/javascript.js"></script>
+    </body>
+</html>

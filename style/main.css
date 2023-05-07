@@ -156,12 +156,13 @@ body{
     top: 2em;
     position: relative;
     left: 2em;
-    width: 86em;
+    width: 87em;
     overflow: auto;
     white-space: nowrap;
     background-color: var(--maintransparent);
     border-radius: 10px;
     border: transparent 10px solid;
+    border-right: 2em solid transparent ;
     top: 10px;
 }
 .studente{ 
@@ -171,7 +172,10 @@ body{
     border: 1px solid white;
     border-radius: 10px;
     display: inline-block;
-
+    background-image: url(../image/profilo.png);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
 }
 ::-webkit-scrollbar-track {
     background: var(--background);
