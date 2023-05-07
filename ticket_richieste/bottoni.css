@@ -15,3 +15,36 @@
 .my-button:active {
   box-shadow: 0px 0px 10px 5px #14db28;
 }
+
+body {
+  font-size: 16px;
+  background-color: var(--div-back);
+  font-family: var(--font);
+  color: var(--text-color);}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 3em;
+  padding: 4em;
+}
+
+.left {
+  flex-basis: 75%;
+  border-right: 3px solid #0DA700;
+  padding-right: 1em;
+  text-align: center;
+}
+
+.right {
+  flex-basis: 25%;
+  padding-left: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1em;
+}
