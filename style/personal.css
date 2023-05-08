@@ -7,7 +7,6 @@ body{
 .top {
     background-color: var(--div-back);
     height: 6em;
-    margin-bottom: 0.5em;
     z-index: 0;
     position: relative;
     display: flex;
@@ -146,4 +145,58 @@ body{
     width: 100%;
     transition: all 1s;
 }
+.sinistra{
+    float: left;
+    height: 80%;
+    background-color: var(--div-back);
+    width: 75%;
+    margin-top: 4em;
 
+}
+.destra{
+    float: right;
+    height: 80%;
+    background-color: var(--div-back);
+    width: 25%;
+    margin-top: 4em;
+    display: flex;
+}
+.riga{
+    position: absolute;
+    width: 0.4%;
+    background-color: green;
+    left: 75%;
+    height: 65%;
+    margin-top: 4em;
+    border-radius: 1em;
+    top: 145px;
+}
+.sinistra h3{
+    font-family: var(--font);
+    color: var(--green);
+    padding: 0px 0px 0px 30px;
+}
+.sinistra p{
+    font-family: var(--font);
+    color: #fff;
+    padding: 0px 0px 0px 60px;
+}
+.destra h3{
+    text-align: center;
+    color: #fff;
+    font-family: var(--font);
+    display: flex;
+    height: 17em;
+    margin-left: 30%;
+    flex-direction: column;
+    justify-content: center;
+}
+.bio{
+    width: 20%;
+    height: 20%;
+    left: 78%;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+}
