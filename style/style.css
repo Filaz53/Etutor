@@ -182,6 +182,154 @@ h4{
   font-size: 1.3em;
 }
 
+a{
+  text-decoration: none;
+}
+
+
+.cont{
+  width: 60%;
+  margin: auto;
+  position: relative;
+  top: 0.5em;
+}
+.cont_password{
+  width: 60%;
+  margin: auto;
+  position: relative;
+  top: 0.5em;
+}
+
+.ticket{
+  background-color: var(--div-back);
+  height: 20em;
+  width: 40em;
+  position: relative;
+  margin: auto;
+  border-radius: 5em;
+  padding: 5em;
+}
+.area{
+  background-color: var(--div-back);
+  height: 35em;
+  width: 70em;
+  position: relative;
+  margin: auto;
+  border-radius: 5em;
+  top: 2.5em;
+}
+
+#txt{
+  width: 80%;
+  margin: auto;
+  position: relative;
+  top: 3em;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+#txt_password1{
+  width: 50%;
+  height: 60%;
+  margin: auto;
+  position: relative;
+  color: white;
+  font-size: 1.5em;
+  float: left;
+  text-align: center;
+  padding: 1.5em;
+  border-right: #37c42b solid 0.3em;
+  border-radius: 0.2em;
+  top: 2em;
+}
+
+
+#txt_password2{
+  width: 30%;
+  margin: auto;
+  position: relative;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  float: right;
+  padding: 3em;
+  top: 0.55em;
+}
+
+span#Eletronic{
+  font-size: 5em;
+  color: var(--green);
+  font-family: var(--font-title);
+}
+.Etutor span{
+  font-size: 5em;
+  color: white;
+  font-family: var(--font-title);
+}
+.Etutor_p span{
+  font-size: 5em;
+  color: white;
+  font-family: var(--font-title);
+}
+.Etutor{
+  width: 50%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: -1.5em;
+}
+.Etutor_p{
+  width: 50%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: 1.5em;
+}
+
+#buttoni{
+  width: 80%;
+  margin: auto;
+  position: relative;
+  top: 10em;
+}
+
+#rifiuta{
+  border-radius: 1em;
+  height: 3em;
+  width: 12em;
+  border: #37c42b 0.1em solid;
+}
+
+#accetta{
+  border-radius: 1em;
+  height: 2.5em;
+  width: 12em;
+  background-color: #37c42b;
+  border: black solid 0.1em;
+  float: right;
+  color: black;
+}
+
+#reimposta{
+  border-radius: 0.8em;
+  height: 2em;
+  width: 20em;
+  background-color: var(--background);
+  border: solid 0.1em;
+  position: relative;
+  top: 6.15em;
+}
+
+#non{
+  border-radius: 0.8em;
+  height: 2em;
+  width: 15em;
+  background-color: var(--background);
+  border: solid 0.1em;
+  position: relative;
+  top: 5em;
+}
+
 
 #index{
   text-transform: uppercase;
