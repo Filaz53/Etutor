@@ -11,16 +11,6 @@ function typeWriter() {
     }
   }
 
-var k =0;
-var Register = 'Register';
-function typeWriter2() {
-if (k < Register.length) {
-    document.getElementById("tutor").innerHTML += Register.charAt(k);
-    k++;
-    setTimeout(typeWriter2, speed);
-}
-}
-
 function downlogin(){
   document.getElementById('container').style.top = "calc(-100% + 5em)";
   document.getElementById('TITLE').style.top = "100%";
@@ -28,25 +18,7 @@ function downlogin(){
   document.getElementById('login-register').style.top = "100%";
   typeWriter();
 }
-
-var space=0;
-function rightregister(){    
-    setTimeout('document.getElementById("tutor").innerHTML = "Logi"', 160);
-    setTimeout('document.getElementById("tutor").innerHTML = "Log"', 240);
-    setTimeout('document.getElementById("tutor").innerHTML = "Lo"', 320);
-    setTimeout('document.getElementById("tutor").innerHTML = "L"', 400);
-    setTimeout('document.getElementById("tutor").innerHTML = ""', 480);
-    setTimeout('document.getElementById("tutor").innerHTML = "R"', 560);
-    setTimeout('document.getElementById("tutor").innerHTML = "Re"', 640);
-    setTimeout('document.getElementById("tutor").innerHTML = "Reg"', 720);
-    setTimeout('document.getElementById("tutor").innerHTML = "Regi"', 800);
-    setTimeout('document.getElementById("tutor").innerHTML = "Regis"', 880);
-    setTimeout('document.getElementById("tutor").innerHTML = "Regist"', 960);
-    setTimeout('document.getElementById("tutor").innerHTML = "Registe"', 1040);
-    setTimeout('document.getElementById("tutor").innerHTML = "Register"', 1120);
-    
-}
-function leftlogin(){
+function changetoregister(){
     setTimeout('document.getElementById("tutor").innerHTML = "Registe"', 160);
     setTimeout('document.getElementById("tutor").innerHTML = "Regist"', 240);
     setTimeout('document.getElementById("tutor").innerHTML = "Regis"', 320);
@@ -60,9 +32,26 @@ function leftlogin(){
     setTimeout('document.getElementById("tutor").innerHTML = "Log"', 960);
     setTimeout('document.getElementById("tutor").innerHTML = "Logi"', 1040);
     setTimeout('document.getElementById("tutor").innerHTML = "Login"', 1120);
+    return;
 }
 
 
+function changetologin(){
+    setTimeout('document.getElementById("tutor").innerHTML = "Logi"', 160);
+    setTimeout('document.getElementById("tutor").innerHTML = "Log"', 240);
+    setTimeout('document.getElementById("tutor").innerHTML = "Lo"', 320);
+    setTimeout('document.getElementById("tutor").innerHTML = "L"', 400);
+    setTimeout('document.getElementById("tutor").innerHTML = ""', 480);
+    setTimeout('document.getElementById("tutor").innerHTML = "R"', 560);
+    setTimeout('document.getElementById("tutor").innerHTML = "Re"', 640);
+    setTimeout('document.getElementById("tutor").innerHTML = "Reg"', 720);
+    setTimeout('document.getElementById("tutor").innerHTML = "Regi"', 800);
+    setTimeout('document.getElementById("tutor").innerHTML = "Regis"', 880);
+    setTimeout('document.getElementById("tutor").innerHTML = "Regist"', 960);
+    setTimeout('document.getElementById("tutor").innerHTML = "Registe"', 1040);
+    setTimeout('document.getElementById("tutor").innerHTML = "Register"', 1120);
+    return;
+}
 
 
 
@@ -92,13 +81,55 @@ function LOGINShow()
   {document.getElementById('Lucchetto').name = "lock-open-outline"}
 
 }
+
+var varfocus = 0;
+
+function funfocus(){
+  varfocus++;
+  //non in focus
+  if( varfocus == 2){
+    return varfocus = 0;
+  }
+  else return varfocus
+}
+
+
+
 function controllo(){
   var Email = document.getElementById('email').value;
-  if(Email == 0)
+  if(Email == 0 || varfocus == 0)
   {
+    //sulla riga
     document.getElementById('email-label').style.top = "50%"
   }
   else{
+    //in alto
     document.getElementById('email-label').style.top = "-5px"
+  }
+}
+
+
+
+
+var cont = 0;
+function scroolhor(){
+  cont++;
+  if(cont == 2)
+  {
+    cont = 0;
+    changetoregister();
+    document.getElementById('left').style.width = "0%";
+    document.getElementById('right').style.width = "10%";
+    document.getElementById('left').style.opacity = "0";
+    document.getElementById('right').style.opacity = "1";
+    document.getElementById('accesso').style.left = "0%";
+  }
+  else{
+    changetologin();
+    document.getElementById('left').style.width = "10%";
+    document.getElementById('right').style.width = "0%";
+    document.getElementById('left').style.opacity = "1";
+    document.getElementById('right').style.opacity = "0";
+    document.getElementById('accesso').style.left = "-50%";
   }
 }
