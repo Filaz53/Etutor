@@ -96,7 +96,7 @@ function funfocus(){
 
 
 function controllo(){
-  var Email = document.getElementById('email').value;
+  var Email = document.getElementById('emaillogin').value;
   if(Email == 0 || varfocus == 0)
   {
     //sulla riga

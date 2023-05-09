@@ -26,37 +26,34 @@
                 <div id="accesso">
                     <!--LOGIN-->
                                     <div id="login"> 
-                                        <form id="form_log" action="login" autocomplete="on">
+                                        <div id="form_log" method="post" autocomplete="off">
                                 
                                           <div class="inputbox">
                                             <ion-icon name="mail-outline"></ion-icon>
-                                            <input id="email" value="" autocomplete="on"  type="email" pattern=".+@aldini.istruzioneer.it" onfocusin="funfocus()" onfocusout="funfocus()" oninput="controllo()" required> 
+                                            <input id="emaillogin" value="" autocomplete="off"  type="email" pattern=".+@aldini.istruzioneer.it" onfocusin="funfocus()" onfocusout="funfocus()" oninput="controllo()" required> 
                                             <label id="email-label">Email</label>
                                           </div>
                                 
                                           <div class="inputbox">
                                             <ion-icon name="lock-closed-outline" id="Lucchetto" onclick="LOGINShow()"></ion-icon>
-                                            <input id="Lpassword" autocomplete="on" type="password" name="psw" required>
+                                            <input id="Lpassword" autocomplete="off" type="password" name="psw" required>
                                             <label>Password</label>
                                           </div>
                                 
-                                          <div class="ricordami">
-                                            <input type="checkbox" id="box1" checked="checked" name="remember"><label id="terms1">Ricordami</label> 
-                                          </div>
                                 
                                           <div class="button_signin">
-                                            <button type="submit">Sign in</button>
+                                            <button type="submit" onclick="requestlogin()" >Sign in</button>
                                           </div>
                                 
                                           <div class="recupera">
                                             <span class="psw">Hai dimanticato la password? <a href="#">Recupera</a></span>
                                           </div>
                                 
-                                        </form>
+                                        </div>
                                     </div>
                     <!--REGISTRAZIONE-->
                                     <div id="register">
-                                        <form id="form_reg" action="pages/main.html" >
+                                        <form id="form_reg" action="" >
                                             <div class="inputbox">
                                             <ion-icon name="mail-outline"></ion-icon>
                                             <input type="email" required> 
@@ -77,7 +74,7 @@
                                             </div>
                                 
                                             <div class="button_reg">
-                                            <button type="submit">Registra</button>
+                                            <button type="submit" onsubmit="requestregister()" >Registra</button>
                                             </div>
                                         </form>
                                     </div>
@@ -107,5 +104,6 @@
             </div>
         </div>
         <script src="js/javascript.js"></script>
+        <script src="js/request.js"></script>
     </body>
 </html>
