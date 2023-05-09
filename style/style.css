@@ -776,3 +776,52 @@ div.inputitem {
    #middle{
     width: 40%;
    }
+
+.container{    
+  height: 90%;
+  width: 70%;
+  background: linear-gradient(148deg, rgba(47, 60, 47, 0.781)0%, rgba(74, 162, 68, 0.825)100%);
+  border-radius: 2em;
+  position: relative;
+  left: 15%;
+  margin-top: 5%;
+}
+.infoAggiunte{
+  height: 30em;
+  background-image: url("../image/geometric.png");
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+  margin-right: 0;
+}
+.infoAggiunte h2{
+  padding: 30px;
+  color: #fff;
+}
+#conferma{
+  border-radius: 0.4em;
+  height: 2.5em;
+  width: 12em;
+  border: #37c42b 0.1em solid;
+  position: relative;
+  top: 4em;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-family: var(--font-title);
+}
+.button{
+  width: 22%;
+  position: relative;
+  margin: auto;
+}
+.contenitore_dati{
+  color:#fff;
+  padding: 0px 0px 0px 60px;
+}
+.contenitore_dati label{
+  padding-right: 10px; 
+}
+#tempo{
+  position: relative;
+  left: 3em;
+}
