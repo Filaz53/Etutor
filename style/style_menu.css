@@ -1,22 +1,19 @@
-
+html{
+    overflow-x: 0;
+}
 .menu{
     float: right;
-    height: 100%;
-    width: 30%;
+    font-family: var(--font-title);
+    width: 25%;
+    min-height: 35em;
     background-color: var(--div-back);
-    border: black solid 0.4em;
-}
-.big{
-    float: right;
-    height: 100%;
-    width: 40%;
-    border-left: #37c42b solid 0.4em;
+    border-left: black solid 0.4em;
+    border-right: black solid 0.4em;
 }
 
 .color{
-    background: rgb(122,145,122);
     border-bottom: black solid 0.4em;
-    height: 12em;
+    height: 9em;
     background: linear-gradient(90deg, rgba(122,145,122,1) 0%, rgba(14,68,16,0.854954481792717) 54%);
 }
 
@@ -31,11 +28,11 @@
     width: 8em;
     background-repeat: no-repeat;
     position: relative;
-    top: 3em;
+    top: 1em;
 }
 #user{
     position: relative;
-    top: -0.95em;
+    top: -2.45em;
     left: 6em;
     font-size: 2em;
     color: white;
@@ -49,12 +46,82 @@
 #label{
     font-size: 1.5em;
     color: white;
-    margin: 2em 2em 0 0.5em;
+    margin: 1em 2em 0 0.5em;
 }
-#checkbox{
-    height: 5em;
+.checkbox{
+    height: 6em;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    display: flex;
+    position: relative;
+    top: 1em;
 }
-.lunedì .martedì .mercoledì .giovedì{
-    height: 3em;
+#lunedì{
+    height: 45%;
+    width: 13%;
     border: black solid 0.2em;
+    margin-right: 1%;
+}
+#martedì{
+    height: 45%;
+    width: 13%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+}
+#mercoledì{
+    height: 45%;
+    width: 13%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+}
+#giovedì{
+    height: 45%;
+    width: 13%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+}
+#venerdì{
+    height: 45%;
+    width: 13%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+}
+#sabato{
+    height: 45%;
+    width: 13%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+}
+#domenica{
+    height: 45%;
+    width: 13%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+}
+
+#giorni{
+    margin: 0.1em 10% 0.1em 10%;
+    width: 80%;
+    left: 0.2em;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    top: 3em;
+    font-family: var(--font-title);
+    font-size: 1em;
+}
+
+#ric_tutor{
+    height: 2.5em;
+    font-family: var(--font-title);
+    font-size: 1.3em;
+    margin: 0 20% 1em 20%;
+    width: 60%;
+    position: relative;
+    top: 4em;
+    font-weight: lighter;
+    border: black solid 0.2em;
+    border-radius: 1em;
+    background: linear-gradient(90deg, rgba(122,145,122,1) 0%, rgba(14,68,16,0.854954481792717) 54%);
+    text-transform: uppercase;
 }
