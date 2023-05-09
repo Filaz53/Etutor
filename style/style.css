@@ -413,7 +413,8 @@ a{
   top: 0.5em;
 }
 .cont_password{
-  width: 60%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   position: relative;
   top: 0.5em;
@@ -431,7 +432,7 @@ a{
 .area{
   background-color: var(--div-back);
   height: 35em;
-  width: 70em;
+  width: 80%;
   position: relative;
   margin: auto;
   border-radius: 5em;
@@ -448,7 +449,7 @@ a{
   text-align: center;
 }
 #txt_password1{
-  width: 50%;
+  width: 60%;
   height: 60%;
   margin: auto;
   position: relative;
@@ -464,7 +465,7 @@ a{
 
 
 #txt_password2{
-  width: 30%;
+  width: 20%;
   margin: auto;
   position: relative;
   color: white;
@@ -473,6 +474,7 @@ a{
   float: right;
   padding: 3em;
   top: 0.55em;
+  left: -1em;
 }
 
 span#Eletronic{
@@ -514,7 +516,7 @@ span#Eletronic{
 
 #rifiuta{
   border-radius: 1em;
-  height: 3em;
+  height: 2.5em;
   width: 12em;
   border: #37c42b 0.1em solid;
 }
@@ -526,27 +528,28 @@ span#Eletronic{
   background-color: #37c42b;
   border: black solid 0.1em;
   float: right;
-  color: black;
+  text-transform: capitalize;
 }
 
 #reimposta{
   border-radius: 0.8em;
   height: 2em;
   width: 20em;
-  background-color: var(--background);
-  border: solid 0.1em;
+  border: #37c42b 0.1em solid;
   position: relative;
-  top: 6.15em;
+  top: 6.53em;
 }
 
 #non{
   border-radius: 0.8em;
   height: 2em;
   width: 15em;
-  background-color: var(--background);
-  border: solid 0.1em;
+  background-color: #37c42b;
+  border: black solid 0.1em;
   position: relative;
-  top: 5em;
+  top: 3em;
+  left: -2em;
+  text-transform: capitalize;
 }
 
 
