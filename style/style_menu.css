@@ -1,0 +1,60 @@
+
+.menu{
+    float: right;
+    height: 100%;
+    width: 30%;
+    background-color: var(--div-back);
+    border: black solid 0.4em;
+}
+.big{
+    float: right;
+    height: 100%;
+    width: 40%;
+    border-left: #37c42b solid 0.4em;
+}
+
+.color{
+    background: rgb(122,145,122);
+    border-bottom: black solid 0.4em;
+    height: 12em;
+    background: linear-gradient(90deg, rgba(122,145,122,1) 0%, rgba(14,68,16,0.854954481792717) 54%);
+}
+
+#avatar{
+    left: 0.8em;
+    padding: 0.5em;
+    border-radius: 100%;
+    border: black solid 0.4em;
+    background-image: url(../image/avatar.png);
+    background-size: cover;
+    height: 9em;
+    width: 8em;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 3em;
+}
+#user{
+    position: relative;
+    top: -0.95em;
+    left: 6em;
+    font-size: 2em;
+    color: white;
+}
+
+#text{
+    margin: 3em 2em 0 0.5em;
+    font-size: 1.2em;
+    color: white;
+}
+#label{
+    font-size: 1.5em;
+    color: white;
+    margin: 2em 2em 0 0.5em;
+}
+#checkbox{
+    height: 5em;
+}
+.lunedì .martedì .mercoledì .giovedì{
+    height: 3em;
+    border: black solid 0.2em;
+}
