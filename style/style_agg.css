@@ -125,3 +125,80 @@ html{
     background: linear-gradient(90deg, rgba(122,145,122,1) 0%, rgba(14,68,16,0.854954481792717) 54%);
     text-transform: uppercase;
 }
+
+/*-----Tutor-----*/
+
+
+.cont_tutor{
+    background-color: var(--div-back);
+    width: 65%;
+    height: 100%;
+    float: right;
+    margin-top: 2em;
+    font-family: var(--font-title);
+}
+
+#profilo_tutor{
+    width: 100%;
+    margin: 0.5em 0 0.2em 0.5em;
+    position: absolute;
+    height: 7em;
+    border-radius: 0.9em;
+    background-color: var(--background);
+    float: right;
+    position: relative;
+    left: 2em;
+}
+
+#profilephoto{
+    background-image: url(../image/profile.png);
+    background-size: cover;
+    border-radius: 25%;
+    height: 80%;
+    width: 10%;
+    margin: 1.5% 1% 1.5% 2%;
+}
+
+#name{
+    color: white;
+    font-size: 1.8em;
+    position: relative;
+    top: -3em;
+    left: 4.7em;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin: 0.01em;
+}
+
+#materie{
+    color: white;
+    font-size: 1.8em;
+    position: relative;
+    top: -3em;
+    left: 4.7em;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin: 0.01em;
+}
+
+.profilo_btn{
+    color: white;
+    font-size: 1.8em;
+    position: relative;
+    top: -4.6em;
+    text-transform: uppercase;
+    font-weight: lighter;
+    float: right;
+    right: 2em;
+    margin-left: 0.5em;
+}
+
+#btn_t{
+    height: 1.5em;
+    width: 7.5em;
+    border: #37c42b solid 0.01em;
+    border-radius: 0.4em;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-weight: lighter;
+}
