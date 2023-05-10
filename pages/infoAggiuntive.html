@@ -7,24 +7,57 @@
     <title>Document</title>
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/darkmode.css">
+        <link rel="stylesheet" href="../style/personal.css">
+
 </head>
 <body>
+
+    <div class="top">
+        <div id="title">
+            <span id="Eletronic">E</span><span>Tutor</span><span id="tutor"></span>
+        </div>
+        <div id="profile">
+            <div id="profileimage"></div>
+            <div id="username">
+                <span>username</span>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="infoAggiunte">
-            <h2>Dicci di più su di TE</h2>
+            <h2 id="h2">Dicci di più su di TE</h2>
     
             <div class="contenitore_dati">
-                <p>SEZIONE: </p>
-                <label>
-                    ETÀ: <input id="tempo" type="datetime-local" name="mydatetime">
-                </label>
-                <p>SESSO: </p>
-                <p>INDIRIZZO: </p>
-                <p>INDIRIZZO: </p>
+                <div class="sezione">
+                <p id="p">SEZIONE: </p>
+                <select name="sezione" id="sez">
+                    <option value="1">Prima Superiore</option>
+                    <option value="2">Seconda Superiore</option>
+                    <option value="3">Terza Superiore</option>
+                    <option value="4">Quarta Superiore</option>
+                    <option value="5">Quinta Superiore</option>
+                </select>
+                </div>
+                <div class="tempo">
+                <label id="p">Data di nascita:</label> <input id="tempo" type="datetime-local" name="mydatetime">
+                </div>
+                <div class="sesso">
+                <p id="p">SESSO: </p>
+                <select name="sesso" id="sex">
+                    <option value="maschio">Maschio</option>
+                    <option value="femmina">Femmina</option>
+                    <option value="3">Gnomo armato di ascia</option>
+                </select>
+                </div>
+             <!--  <div class="indir">
+                <p id="p">INDIRIZZO: </p>
+                <input id="ind" type="text" name="indirizzo">
+                </div> --> 
+                <div class="button">
+                    <button id="conferma">Conferma</button>
+                </div>
             </div>
-            <div class="button">
-                <button id="conferma">Conferma</button>
-            </div>
+            
         </div>
         
     </div>

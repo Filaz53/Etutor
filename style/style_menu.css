@@ -5,7 +5,6 @@ html{
     float: right;
     font-family: var(--font-title);
     width: 25%;
-    min-height: 35em;
     background-color: var(--div-back);
     border-left: black solid 0.4em;
     border-right: black solid 0.4em;
@@ -55,6 +54,7 @@ html{
     display: flex;
     position: relative;
     top: 1em;
+    cursor: pointer;
 }
 #lunedì{
     height: 45%;

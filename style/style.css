@@ -773,6 +773,7 @@ div.inputitem {
     cursor: pointer;
     z-index: 100;
    }
+
    #middle{
     width: 40%;
    }
@@ -780,11 +781,21 @@ div.inputitem {
 .container{    
   height: 90%;
   width: 70%;
+  font-family: var(--font-title);
   background: linear-gradient(148deg, rgba(47, 60, 47, 0.781)0%, rgba(74, 162, 68, 0.825)100%);
   border-radius: 2em;
   position: relative;
   left: 15%;
-  margin-top: 5%;
+  top: -2em;
+}
+.infoAggiunte #h2{
+  text-transform: uppercase;
+  font-size: 4em;
+  color: black;
+}
+#p{
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 .infoAggiunte{
   height: 30em;
@@ -798,30 +809,112 @@ div.inputitem {
   padding: 30px;
   color: #fff;
 }
-#conferma{
-  border-radius: 0.4em;
-  height: 2.5em;
-  width: 12em;
-  border: #37c42b 0.1em solid;
+.sezione{
+  display: flex;
+  margin-bottom: 1em;
+}
+#sez{
+  background-color: transparent;
+  font-family: var(--font-title);
+  font-size: 1.2em;
+  border: white 0.1em solid;
+  border-radius: 0.7em;
+  width: 11em;
+  height: 2em;
   position: relative;
-  top: 4em;
+  left: 0.9em;
+  top: 0.9em;
+  cursor: pointer;
+}
+.sesso{
+  display: flex;
+  margin-bottom: 2em;
+}
+#sex{
+  background-color: transparent;
+  font-family: var(--font-title);
+  font-size: 1.2em;
+  border: white 0.1em solid;
+  border-radius: 0.7em;
+  width: 11em;
+  height: 2em;
+  position: relative;
+  top: 0.8em;
+  left: 0.9em;
+  cursor: pointer;
+}
+
+.indir{
+  display: flex;
+  margin-bottom: 1em;
+  position: relative;
+  top: -4em;
+}
+.comune{
+  display: flex;
+  position: relative;
+  top: -2.5em;
+  float: right;
+}
+
+#ind{
+  background-color: transparent;
+  font-family: var(--font-title);
+  font-size: 1.2em;
+  border: white 0.1em solid;
+  border-radius: 0.7em;
+  width: 11em;
+  height: 2em;
+  position: relative;
+  top: 0.8em;
+  left: 0.9em;
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
+
+.tempo{
+  position: relative;
+  margin-bottom: 0.5m;
+  float: right;
+  top: -8.3em;
+  margin: 4em;
+}
+#tempo{
+  position: relative;
+  top: -0.1em;
+  font-family: var(--font-title);
+  padding: 1px;
+  cursor: pointer;
+}
+option{
+  background-color: #1e1e1e;
+  color: white;
+}
+#conferma{
+  border-radius: 0.7em;
+  height: 2.5em;
+  width: 10em;
+  border: linear-gradient(148deg, rgba(47, 60, 47, 0.781)0%, rgba(74, 162, 68, 0.825)100%) 0.3em solid;
+  background-color: black;
+  position: relative;
   font-weight: lighter;
+  font-size: 1.5em;
   text-transform: uppercase;
   font-family: var(--font-title);
 }
 .button{
-  width: 22%;
   position: relative;
+  width: 35%;
   margin: auto;
 }
 .contenitore_dati{
   color:#fff;
   padding: 0px 0px 0px 60px;
+  position: relative;
+  top: -2em;
 }
 .contenitore_dati label{
   padding-right: 10px; 
-}
-#tempo{
-  position: relative;
-  left: 3em;
 }
