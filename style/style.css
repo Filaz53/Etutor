@@ -686,7 +686,7 @@ div.inputitem {
   .has-val.input {
     padding-left: 5px;
   }
-  form{
+  .form{
     width: 200px;
     margin: auto;
     padding: 30px;
@@ -731,7 +731,7 @@ div.inputitem {
     color: white;
     font-family: Ubuntu;
   }
-  input[type=email]:empty ~ label{
+  input[type=email]:empty ~ label,input[type=password]:empty ~ label,input[type=text]:empty ~ label{
     top: 50%;
   }
   input:focus ~ label,
@@ -917,4 +917,30 @@ option{
 }
 .contenitore_dati label{
   padding-right: 10px; 
+}
+span#passw{
+  display: none; 
+  position: absolute;
+  color: white;
+  padding: 10px;
+  background: #4d4d4d;
+  border-radius: 10px;
+  font-weight: 100;
+  font-size: 12;
+  top: 40%;
+  z-index: 10;
+  opacity: 0;
+}
+.Lpasswordbox:hover ~ span#passw{
+  display: block; 
+  position: absolute;
+  color: white;
+  padding: 10px;
+  background: #4d4d4d;
+  border-radius: 10px;
+  font-weight: 100;
+  font-size: 12;
+  top: 40%;
+  z-index: 10;
+  opacity: 1;
 }

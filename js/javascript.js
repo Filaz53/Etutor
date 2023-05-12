@@ -61,6 +61,10 @@ function Show()
     {document.getElementById('password').type = 'text'}
   else
   document.getElementById('password').type = 'password'
+  if(document.getElementById('Lucchetto').name == "lock-open-outline")
+  {document.getElementById('Lucchetto').name = "lock-closed-outline"}
+  else
+  {document.getElementById('Lucchetto').name = "lock-open-outline"}
 }
 function REShow()
 {
@@ -68,6 +72,10 @@ function REShow()
     {document.getElementById('REpassword').type = 'text'}
   else
   document.getElementById('REpassword').type = 'password'
+  if(document.getElementById('RELucchetto').name == "lock-open-outline")
+  {document.getElementById('RELucchetto').name = "lock-closed-outline"}
+  else
+  {document.getElementById('RELucchetto').name = "lock-open-outline"}
 }
 function LOGINShow()
 {
@@ -75,16 +83,20 @@ function LOGINShow()
     {document.getElementById('Lpassword').type = 'text'}
   else
   document.getElementById('Lpassword').type = 'password'
-  if(document.getElementById('Lucchetto').name == "lock-open-outline")
-  {document.getElementById('Lucchetto').name = "lock-closed-outline"}
+  if(document.getElementById('LLucchetto').name == "lock-open-outline")
+  {document.getElementById('LLucchetto').name = "lock-closed-outline"}
   else
-  {document.getElementById('Lucchetto').name = "lock-open-outline"}
+  {document.getElementById('LLucchetto').name = "lock-open-outline"}
 
 }
+
+
+
 
 var varfocus = 0;
 
 function funfocus(){
+  buttonaccept()
   varfocus++;
   //non in focus
   if( varfocus == 2){
@@ -100,13 +112,28 @@ function controllo(){
   if(Email == 0 || varfocus == 0)
   {
     //sulla riga
-    document.getElementById('email-label').style.top = "50%"
+    document.getElementById('login-email-label').style.top = "50%"
   }
   else{
     //in alto
-    document.getElementById('email-label').style.top = "-5px"
+    document.getElementById('login-email-label').style.top = "-5px"
   }
 }
+function controllo2(){
+  var Email = document.getElementById('emailregister').value;
+  if(Email == 0 || varfocus == 0)
+  {
+    //sulla riga
+    document.getElementById('register-email-label').style.top = "50%"
+  }
+  else{
+    //in alto
+    document.getElementById('register-email-label').style.top = "-5px"
+  }
+}
+
+
+
 
 
 
@@ -133,3 +160,30 @@ function scroolhor(){
     document.getElementById('accesso').style.left = "-50%";
   }
 }
+var passinpfocus=0;
+function focusinppass(){
+  passinpfocus++;
+  //non in focus
+  if( passinpfocus == 2){
+    return passinpfocus = 0;
+  }
+  else return passinpfocus
+
+}
+
+function controllopassword(passinpfocus){
+    var lett = document.getElementById('Lpassword').value.length;
+    if(!(lett > 0 && passinpfocus != 1))
+    {
+      //sulla riga
+      console.log("true");
+      document.getElementById('pass-login-email-label').style.top = "50%"
+    }
+    else{
+      //in alto
+      console.log("true");
+
+      document.getElementById('pass-login-email-label').style.top = "-5px"
+    }
+}
+

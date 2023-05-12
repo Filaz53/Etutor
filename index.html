@@ -53,11 +53,11 @@
                                     </div>
                     <!--REGISTRAZIONE-->
                                     <div id="register">
-                                        <form id="form_reg" action="" >
+                                        <div id="form_reg" class="form" action="" >
                                             <div class="inputbox">
                                             <ion-icon name="mail-outline"></ion-icon>
-                                            <input type="email" required> 
-                                            <label>Email</label>
+                                            <input id="emailregister" value="" autocomplete="off"  type="email" pattern=".+@aldini.istruzioneer.it" onfocusin="funfocus()" onfocusout="funfocus()" oninput="controllo2()" required>
+                                            <label id="register-email-label">Email</label>
                                             </div>
                                 <!--password-->
                                             <div class="inputbox">
@@ -76,7 +76,7 @@
                                             <div class="button_reg">
                                             <button type="submit" onsubmit="requestregister()" >Registra</button>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 
                                     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
