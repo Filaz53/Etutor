@@ -192,3 +192,7 @@ body{
     border-radius: 10px;
     border: solid 1px var(--background);
 }
+
+#search{
+    display: flex;
+}

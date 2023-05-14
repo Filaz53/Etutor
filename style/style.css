@@ -931,7 +931,7 @@ span#passw{
   z-index: 10;
   opacity: 0;
 }
-.Lpasswordbox:hover ~ span#passw{
+.Lpasswordbox:hover ~ span#passw, span#passw:hover{
   display: block; 
   position: absolute;
   color: white;

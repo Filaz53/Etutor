@@ -96,7 +96,6 @@ function LOGINShow()
 var varfocus = 0;
 
 function funfocus(){
-  buttonaccept()
   varfocus++;
   //non in focus
   if( varfocus == 2){

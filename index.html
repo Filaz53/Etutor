@@ -26,23 +26,23 @@
                 <div id="accesso">
                     <!--LOGIN-->
                                     <div id="login"> 
-                                        <div id="form_log" method="post" autocomplete="off">
+                                        <div id="form_log" method="post" class="form" autocomplete="off">
                                 
-                                          <div class="inputbox">
+                                          <div class="inputbox Emailbox">
                                             <ion-icon name="mail-outline"></ion-icon>
                                             <input id="emaillogin" value="" autocomplete="off"  type="email" pattern=".+@aldini.istruzioneer.it" onfocusin="funfocus()" onfocusout="funfocus()" oninput="controllo()" required> 
-                                            <label id="email-label">Email</label>
+                                            <label id="login-email-label">Email</label>
                                           </div>
                                 
-                                          <div class="inputbox">
-                                            <ion-icon name="lock-closed-outline" id="Lucchetto" onclick="LOGINShow()"></ion-icon>
-                                            <input id="Lpassword" autocomplete="off" type="password" name="psw" required>
-                                            <label>Password</label>
+                                          <div class="inputbox Lpasswordbox">
+                                            <ion-icon name="lock-closed-outline" id="LLucchetto" onclick="LOGINShow()"></ion-icon>
+                                            <input id="Lpassword" autocomplete="off" type="password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30}" oninput="controllopassword()" required>
+                                            <label id="pass-login-email-label">Password</label>
                                           </div>
                                 
-                                
+                                          <span id="passw">La password deve contenere :<br> minimo 1 maiuscola <br> minimo 1 minuscola <br> minimo 1 numero <br> contenere dagli 8 ai 30 caratteri</span>
                                           <div class="button_signin">
-                                            <button type="submit" onclick="requestlogin()" >Sign in</button>
+                                            <button type="submit" id="buttonsubmit" onclick="requestlogin()" >Sign in</button>
                                           </div>
                                 
                                           <div class="recupera">
@@ -61,14 +61,14 @@
                                             </div>
                                 <!--password-->
                                             <div class="inputbox">
-                                            <ion-icon name="lock-closed-outline" onclick="Show()"></ion-icon>
+                                            <ion-icon name="lock-closed-outline" id="Lucchetto"  onclick="Show()"></ion-icon>
                                             <input id="password" type="password" name="psw" required>
                                             <label>Password</label>
                                             </div>
                                 
                                 <!--REpassword-->
                                             <div class="inputbox">
-                                            <ion-icon name="lock-closed-outline" onclick="REShow()"></ion-icon>
+                                            <ion-icon name="lock-closed-outline" id="RELucchetto"  onclick="REShow()"></ion-icon>
                                             <input id="REpassword" type="password" name="psw" required>
                                             <label>Ripeti password</label>
                                             </div>
