@@ -949,7 +949,7 @@ span#passw{
 
 .non:before{
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 35%, rgba(109,91,26,1) 25%, rgba(37,16,3,0.8211659663865546) 55%, rgba(73,65,20,1) 80%, rgba(173,158,46,0.8239670868347339) 99%);
   position: absolute;
   top: -2px;
   left:-2px;
@@ -999,7 +999,7 @@ span#passw{
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 35%, rgba(109,91,26,1) 25%, rgba(37,16,3,0.8211659663865546) 55%, rgba(73,65,20,1) 80%, rgba(173,158,46,0.8239670868347339) 99%);
   position: absolute;
   top: -2px;
   left:-2px;
@@ -1037,7 +1037,7 @@ span#passw{
 }
 .accetta:before{
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 35%, rgba(109,91,26,1) 25%, rgba(37,16,3,0.8211659663865546) 55%, rgba(73,65,20,1) 80%, rgba(173,158,46,0.8239670868347339) 99%);
   position: absolute;
   top: -2px;
   left:-2px;

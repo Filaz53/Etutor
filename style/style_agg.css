@@ -1,17 +1,22 @@
 html{
     overflow-x: 0;
+    height: 100%;
+}
+body{
+    height: 100%;
 }
 .menu{
     float: right;
     font-family: var(--font-title);
-    width: 25%;
+    width: 30%;
+    height: 100%;
     background-color: var(--div-back);
-    border-left: black solid 0.4em;
-    border-right: black solid 0.4em;
+    border-left: black solid 0.5em;
+    border-right: black solid 0.5em;
 }
 
 .color{
-    border-bottom: black solid 0.4em;
+    border-bottom: black solid 0.5em;
     height: 9em;
     background: linear-gradient(90deg, rgba(122,145,122,1) 0%, rgba(14,68,16,0.854954481792717) 54%);
 }
@@ -20,7 +25,7 @@ html{
     left: 0.8em;
     padding: 0.5em;
     border-radius: 100%;
-    border: black solid 0.4em;
+    border: black solid 0.5em;
     background-image: url(../image/avatar.png);
     background-size: cover;
     height: 9em;
