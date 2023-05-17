@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../style/darkmode.css">
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/personal.css">
-        <script src="js/javascript.js"></script> 
+        <script src="../js/javascript.js"></script> 
 
       </head>
 
@@ -18,7 +18,9 @@
               <span id="Eletronic">e</span><span>Tutor</span><span id="tutor"></span>
           </div>
 
-          <div id="tutoract"><span > TUTOR </span></div>
+          <div id="tutoract">
+            <a href="../pages/tutor.html"> <span > TUTOR </span></a>
+          </div>
           <div id="homeract">
               <a href="../pages/main.html"><span> HOME </span></a>
           </div>
@@ -30,8 +32,10 @@
         </div>
         <div id="txt"><span id="username">{username}</span> ha chiesto tutoraggio da te per, <span id="materia">{materia}</span> </div>
         <div id="buttoni">
-          <button id="rifiuta">Rifuita</button>
+          <button class="glow-on-hover" id="rifiuta">Rifuita</button>
+          <div class="accetta">
           <button id="accetta">Accetta</button>
+          </div>
         </div>
       </div>
       </div>
