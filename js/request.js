@@ -23,7 +23,7 @@ function loginresponse(e)
 	if (e.status == 200){
 	var NOMEJson = x.Nome;
 	var COGNOMEJson = x.Cognome;
-
+    
 	
 	document.getElementById("Resp").innerHTML = NOMEJson +" "+  COGNOMEJson;
 	}

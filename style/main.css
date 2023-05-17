@@ -157,7 +157,6 @@ body{
     top: 2em;
     position: relative;
     left: 2em;
-    width: 87em;
     overflow: auto;
     white-space: nowrap;
     background-color: var(--maintransparent);
@@ -194,5 +193,17 @@ body{
 }
 
 #search{
+    margin-top: 0.3em;
     display: flex;
+    height: 100%;
+    background-color: var(--div-back);
+
+}
+
+#filtri{
+height: 100%;
+width: 10px;
+}
+#barra{
+height: 7em;
 }

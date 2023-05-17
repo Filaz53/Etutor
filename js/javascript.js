@@ -137,6 +137,8 @@ function controllo2(){
 
 
 
+
+
 var cont = 0;
 function scroolhor(){
   cont++;
@@ -185,4 +187,35 @@ function controllopassword(passinpfocus){
       document.getElementById('pass-login-email-label').style.top = "-5px"
     }
 }
+var giorniliberi = new String;
+var lunedi = new Boolean;
+var martedi = new Boolean;
+var mercoledi = new Boolean;
+var giovedi = new Boolean;
+var venerdi = new Boolean;
+var sabato = new Boolean;
+var domenica = new Boolean;
 
+function modificagiorni(giorno){
+
+  if(giorno=="lun")
+  lunedi=1;
+  else if(giorno=="mar")
+  martedi=1;
+  else if(giorno=="mer")
+  mercoledi=1;
+  else if(giorno=="gio")
+  giovedi=1;
+  else if(giorno=="ven")
+  venerdi=1;
+  else if(giorno=="sab")
+  sabato=1;
+  else if(giorno=="dom")
+  domenica=1;
+  console.log(giorniliberi = (lunedi) ? "lunedi&":"" + (martedi) ? "martedi&":"" + (mercoledi) ? "mercoledi&":"" +(giovedi) ? "giovedi&":"" +(venerdi) ? "venerdi&":"" +(sabato) ? "sabato&":"" +(domenica) ? "domenica":"" );
+}
+
+function agggiorno(giorno){
+  return giorno;
+  
+}

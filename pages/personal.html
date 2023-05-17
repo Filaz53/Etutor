@@ -16,15 +16,43 @@
 
         <div class="sinistra">
             <h3>DATI PROFILO</h2>
-            <p>Nikname: ...</p>
-            <p>Email: ...</p>
-            <p>Età: ../../..</p>
-            <p>Password: ********</p>
+            <div class="DATIPROFILO" >
+            <span>Nikname: <span class="modifica" id="username">...</span> </span><br>
+            <span>Email: <span class="modifica" id="email">...</span> </span><br>
+            <span>Età: <span class="modifica" id="Età">../../..</span> </span><br>
+            <span>Password: <span class="modifica" id="Password">********</span> </span><br>
+            </div>
             <h3>TUTOR</h3>
-            <p>Materia Master: ...</p>
-            <p>Materia in cui offri aiuto: ...</p>
-            <p>Giorni liberi: ...</p>
+            
+           <div class="DATITUTOR">
+            <span>Materia Master: <span class="modifica" id="Materia Master">...</span> </span><br>
+            <span>Materia in cui offri aiuto: <span class="modifica" id="Materie">...</span></span><br>
+            <span>Giorni liberi: </span>
+                <div class="giorni">
+                    <div id="lun">
+                        <input class="Tday" type="checkbox" oninput="modificagiorni('lun')"></span><span class="bday">LUN</span>
+                    </div>
+                    <div id="mar">
+                        <input class="Tday" type="checkbox" oninput="modificagiorni('mar')"></span><span class="bday">MAR</span>
+                    </div>
+                    <div id="mer">
+                        <input class="Tday" type="checkbox" oninput="modificagiorni('mer')"></span><span class="bday">MER</span>
+                    </div>
+                    <div id="gio">
+                        <input class="Tday" type="checkbox" oninput="modificagiorni('gio')"></span><span class="bday">GIO</span>
+                    </div>
+                    <div id="ven">
+                        <input class="Tday" type="checkbox" oninput="modificagiorni('ven')"></span><span class="bday">VEN</span>
+                    </div>
+                    <div id="sab">
+                        <input class="Tday" type="checkbox" oninput="modificagiorni('sab')"></span><span class="bday">SAB</span>
+                    </div>
+                    <div id="dom">
+                        <input class="Tday" type="checkbox" oninput="modificagiorni('dom')"></input><span class="bday">DOM</span>
+                    </div>
+                </div>
 
+           </div>
             
         </div>
         <div class="destra">
