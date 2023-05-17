@@ -29,6 +29,10 @@
     transition: all 1s;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 
 body{
