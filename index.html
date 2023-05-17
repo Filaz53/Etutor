@@ -36,7 +36,7 @@
                                 
                                           <div class="inputbox Lpasswordbox">
                                             <ion-icon name="lock-closed-outline" id="LLucchetto" onclick="LOGINShow()"></ion-icon>
-                                            <input id="Lpassword" autocomplete="off" type="password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30}" oninput="controllopassword()" required>
+                                            <input id="Lpassword" autocomplete="off" type="password" name="psw" oninput="controllopassword()" required>
                                             <label id="pass-login-email-label">Password</label>
                                           </div>
                                 
@@ -74,7 +74,7 @@
                                             </div>
                                 
                                             <div class="button_reg">
-                                            <button type="submit" onsubmit="requestregister()" >Registra</button>
+                                            <button type="submit" onclick="registervalidation()" >Registra</button>
                                             </div>
                                         </div>
                                     </div>
@@ -104,6 +104,5 @@
             </div>
         </div>
         <script src="js/javascript.js"></script>
-        <script src="js/request.js"></script>
     </body>
 </html>
