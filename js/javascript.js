@@ -1,4 +1,5 @@
 
+
 var i = 0;
 var Login = 'Login';
 var speed = 80;
@@ -187,35 +188,267 @@ function controllopassword(passinpfocus){
       document.getElementById('pass-login-email-label').style.top = "-5px"
     }
 }
-var giorniliberi = new String;
-var lunedi = new Boolean;
-var martedi = new Boolean;
-var mercoledi = new Boolean;
-var giovedi = new Boolean;
-var venerdi = new Boolean;
-var sabato = new Boolean;
-var domenica = new Boolean;
+var giorniliberi = 0;
+var lunedi = 0;
+var martedi = 0;
+var mercoledi = 0;
+var giovedi = 0;
+var venerdi = 0;
+var sabato = 0;
+var domenica = 0;
 
 function modificagiorni(giorno){
 
   if(giorno=="lun")
-  lunedi=1;
+  {   
+  lunedi++;
+  if(lunedi!=1)
+  lunedi=0;
+  }
   else if(giorno=="mar")
-  martedi=1;
+  {
+  martedi++;
+  if(martedi!=1)
+  martedi=0;
+  }
   else if(giorno=="mer")
-  mercoledi=1;
+  {
+  mercoledi++;
+  if(mercoledi!=1)
+  mercoledi=0;
+  }
   else if(giorno=="gio")
-  giovedi=1;
+  {
+  giovedi++;
+  if(giovedi!=1)
+  giovedi=0;
+  }
   else if(giorno=="ven")
-  venerdi=1;
+  {
+  venerdi++;
+  if(venerdi!=1)
+  venerdi=0;
+  }
   else if(giorno=="sab")
-  sabato=1;
+  {
+  sabato++;
+  if(sabato!=1)
+  sabato=0;
+  }
   else if(giorno=="dom")
-  domenica=1;
-  console.log(giorniliberi = (lunedi) ? "lunedi&":"" + (martedi) ? "martedi&":"" + (mercoledi) ? "mercoledi&":"" +(giovedi) ? "giovedi&":"" +(venerdi) ? "venerdi&":"" +(sabato) ? "sabato&":"" +(domenica) ? "domenica":"" );
+  {
+  domenica++;
+  if(domenica!=1)
+  domenica=0;
+  }
+
+  }
+
+  var giorniliberi= "";
+function submitupginfo(){
+
+  if(lunedi)
+  {
+    giorniliberi="lunedi";
+  }
+  if(martedi)
+  {
+    if(giorniliberi!="")
+    giorniliberi=giorniliberi+",martedi";
+    else
+    giorniliberi="martedi";
+    }
+    if(mercoledi)
+    {
+      if(giorniliberi!="")
+      giorniliberi=giorniliberi+",mercoledi";
+      else
+      giorniliberi="mercoledi";
+      }
+      if(giovedi)
+      {
+        if(giorniliberi!="")
+        giorniliberi=giorniliberi+",giovedi";
+        else
+        giorniliberi="giovedi";
+        }
+        if(venerdi)
+        {
+          if(giorniliberi!="")
+          giorniliberi=giorniliberi+",venerdi";
+          else
+          giorniliberi="venerdi";
+          }
+          if(sabato)
+          {
+            if(giorniliberi!="")
+            giorniliberi=giorniliberi+",sabato";
+            else
+            giorniliberi="sabato";
+            }
+            if(domenica)
+            {
+              if(giorniliberi!="")
+              giorniliberi=giorniliberi+",domenica";
+              else
+              giorniliberi="domenica";
+              }
+              return giorniliberi;
 }
 
-function agggiorno(giorno){
-  return giorno;
-  
+
+
+
+
+
+
+
+
+function validatePassword() {
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("REpassword").value;
+
+  // Verifica la lunghezza della password
+  if (password.length < 8 || password.length > 30) {
+    alert("La password deve avere una lunghezza compresa tra 8 e 30 caratteri.");
+    return false;
+  }
+
+  // Verifica la presenza di almeno una maiuscola, una minuscola e un numero
+  if (!/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/.test(password)) {
+    alert("La password deve contenere almeno una maiuscola, una minuscola e un numero.");
+    return false;
+  }
+
+  // Verifica che le password corrispondano
+  if (password !== confirmPassword) {
+    alert("Le password non corrispondono.");
+    return false;
+  }
+
+  // La password è valida
+  return true;
+}
+
+
+function registervalidation(){
+  var email= document.getElementById('emailregister').value;
+
+  if(/@aldini\.istruzioneer\.it$/i.test(email))
+  {
+    if(validatePassword()){
+      
+  }
+  }
+
+  else window.alert("email non va bene");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *\ 
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                            REQUEST                                                                        *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+ *                                                                                                                                           *
+\*    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _username = "";
+function usernamecreate() {
+    const email = document.getElementById('emaillogin').value;
+    const parts = email.split('@')[0].split('.');
+    var nome = parts[0];
+    var cognome = parts[1];
+    var username = String(nome + cognome);
+    return { username };
+}
+function requestlogin(_username){
+    _username = usernamecreate()
+    savepass = document.getElementById('Lpassword').value;
+    var Param = "Username=" + _username + "&Password=" + savepass; 
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() { loginresponse(this); };
+        xhttp.open("POST","https://localhost/pj/Login",true);
+        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhttp.send(Param);	
+    }
+function loginresponse(e)
+{
+	var x = JSON.parse(e.responseText);
+	if (e.status == 200){
+	var NOMEJson = x.Nome;
+	var COGNOMEJson = x.Cognome;
+	document.getElementById("Resp").innerHTML = NOMEJson +" "+  COGNOMEJson;
+	}
 }
