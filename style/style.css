@@ -788,7 +788,7 @@ div.inputitem {
   border-radius: 2em;
   position: relative;
   left: 15%;
-  top: -2em;
+  top: 2em;
 }
 .infoAggiunte #h2{
   text-transform: uppercase;
@@ -811,11 +811,11 @@ div.inputitem {
   padding: 30px;
   color: #fff;
 }
-.sezione{
+.anno_classe{
   display: flex;
   margin-bottom: 1em;
 }
-#sez{
+#ac{
   background-color: transparent;
   font-family: var(--font-title);
   font-size: 1.2em;
@@ -825,38 +825,14 @@ div.inputitem {
   height: 2em;
   position: relative;
   left: 0.9em;
-  top: 0.9em;
-  cursor: pointer;
-}
-.sesso{
-  display: flex;
-  margin-bottom: 2em;
-}
-#sex{
-  background-color: transparent;
-  font-family: var(--font-title);
-  font-size: 1.2em;
-  border: white 0.1em solid;
-  border-radius: 0.7em;
-  width: 11em;
-  height: 2em;
-  position: relative;
-  top: 0.8em;
-  left: 0.9em;
+  top: 0.4em;
   cursor: pointer;
 }
 
-.indir{
+.zona_geografica{
   display: flex;
   margin-bottom: 1em;
   position: relative;
-  top: -4em;
-}
-.comune{
-  display: flex;
-  position: relative;
-  top: -2.5em;
-  float: right;
 }
 
 #ind{
@@ -871,6 +847,31 @@ div.inputitem {
   top: 0.8em;
   left: 0.9em;
   cursor: pointer;
+  top: 0.55em;
+}
+.sezione{
+  position: relative;
+  display: flex;
+  margin-bottom: 0.5m;
+  float: right;
+  top: -15em;
+  margin: 4em;
+  left: -0.9em;
+}
+
+#sez{
+  background-color: transparent;
+  font-family: var(--font-title);
+  font-size: 1.2em;
+  border: white 0.1em solid;
+  border-radius: 0.7em;
+  width: 14.5em;
+  height: 2em;
+  position: relative;
+  top: 0.8em;
+  left: 0.9em;
+  cursor: pointer;
+  top: 0.55em;
 }
 button{
   cursor: pointer;
@@ -880,7 +881,7 @@ button{
   position: relative;
   margin-bottom: 0.5m;
   float: right;
-  top: -8.3em;
+  top: -8em;
   margin: 4em;
 }
 #tempo{
@@ -889,6 +890,8 @@ button{
   font-family: var(--font-title);
   padding: 1px;
   cursor: pointer;
+  width: 11em;
+  height: 2em;
 }
 option{
   background-color: #1e1e1e;
@@ -897,7 +900,7 @@ option{
 #conferma{
   border-radius: 0.7em;
   height: 2.5em;
-  width: 10em;
+  width: 25%;
   border: linear-gradient(148deg, rgba(47, 60, 47, 0.781)0%, rgba(74, 162, 68, 0.825)100%) 0.3em solid;
   background-color: black;
   position: relative;
@@ -905,11 +908,9 @@ option{
   font-size: 1.5em;
   text-transform: uppercase;
   font-family: var(--font-title);
-}
-.button{
-  position: relative;
-  width: 35%;
-  margin: auto;
+  top: 2.5em;
+  left: 34%;
+
 }
 .contenitore_dati{
   color:#fff;
