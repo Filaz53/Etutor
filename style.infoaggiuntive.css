@@ -1,0 +1,11 @@
+
+.container{
+    /* height: 90%; */
+    width: 70%;
+    font-family: var(--font-title);
+    background: linear-gradient(148deg, rgba(47, 60, 47, 0.781)0%, rgba(74, 162, 68, 0.825)100%);
+    border-radius: 2em;
+    position: relative;
+    left: 15%;
+    top: -2em;
+  }

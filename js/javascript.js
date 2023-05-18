@@ -349,8 +349,17 @@ function registervalidation(){
 
 
 
-
-
+function searchbar(){
+  var users = document.getElementById('users').style;
+  var filtro = document.getElementById('filtri').style;
+  var content = document.getElementById('content').style;
+  var barra = document.getElementById('barra').style;
+  users.left = "100%";
+users.width = "0%";
+filtro.width = "20%";
+content.width = "80%";
+barra.width = "80%";
+}
 
 
 
