@@ -14,7 +14,6 @@ body{
     position: relative;
     border-radius: 3em 3em 0em 0em;
     top: 5em;
-
 }
 #top{
     width: 100%;
@@ -138,7 +137,7 @@ section{
 
 h2{
   text-align: center;
-  color: #37c42b;;
+  color: #37c42b;
   font-size: 2em;
   font-family: 'VT323';
 }

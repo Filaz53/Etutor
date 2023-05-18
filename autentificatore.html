@@ -1,20 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style/darkmode.css">
-    <link rel="stylesheet" href="autentificatore_style.css">
+    <title>login</title>
+    <link rel="stylesheet" href="./style/autentificatore_style.css">
+    <link rel="stylesheet" href="./style/darkmode.css">
 </head>
 <body>
     <div class="container">
-        <h1>Autenticatore di Identità</h1>
+        <h2>Autentificatore</h2>
         <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <div class="label">
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+                <input type="text" name="token" id="token" placeholder="Inserisci il codice" required/>
 
-            <input type="submit" value="Accedi">
+              <div class="submit">
+                <input id="submit" type="submit" value="controlla">
+              </div>
+            </div>
+            
         </form>
     </div>
 </body>
