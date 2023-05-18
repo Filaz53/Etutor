@@ -779,20 +779,21 @@ div.inputitem {
     width: 40%;
    }
 
-.container{    
+.container{   
   height: 90%;
   width: 70%;
   font-family: var(--font-title);
-  background: linear-gradient(148deg, rgba(47, 60, 47, 0.781)0%, rgba(74, 162, 68, 0.825)100%);
+  background: linear-gradient(148deg, rgb(8 14 8 / 78%)0%, rgba(34, 121, 29, 0.596)100%);
   border-radius: 2em;
   position: relative;
   left: 15%;
   top: 2em;
+
 }
 .infoAggiunte #h2{
   text-transform: uppercase;
   font-size: 4em;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 #p{
   font-size: 1.2em;
@@ -810,9 +811,8 @@ div.inputitem {
   padding: 30px;
   color: #fff;
 }
-.anno_classe{
+.anno_classe, .zona_geografica, .sezione{
   display: flex;
-  margin-bottom: 1em;
 }
 #ac{
   background-color: transparent;
@@ -828,11 +828,6 @@ div.inputitem {
   cursor: pointer;
 }
 
-.zona_geografica{
-  display: flex;
-  margin-bottom: 1em;
-  position: relative;
-}
 
 #ind{
   background-color: transparent;
@@ -847,15 +842,6 @@ div.inputitem {
   left: 0.9em;
   cursor: pointer;
   top: 0.55em;
-}
-.sezione{
-  position: relative;
-  display: flex;
-  margin-bottom: 0.5m;
-  float: right;
-  top: -15em;
-  margin: 4em;
-  left: -0.9em;
 }
 
 #sez{
@@ -900,8 +886,8 @@ option{
   border-radius: 0.7em;
   height: 2.5em;
   width: 25%;
-  border: linear-gradient(148deg, rgba(47, 60, 47, 0.781)0%, rgba(74, 162, 68, 0.825)100%) 0.3em solid;
-  background-color: black;
+  border: green 0.2em solid;
+  background-color: rgba(0, 0, 0, 0);
   position: relative;
   font-weight: lighter;
   font-size: 1.5em;
@@ -1075,4 +1061,13 @@ span#passw{
   border-radius: 0.6em;
   width: fit-content;
   float: right;
+}.info {
+  display: flex;
+  width: 50%;
+  padding: 0% 25%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
