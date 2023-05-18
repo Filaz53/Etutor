@@ -364,16 +364,12 @@ function sito_tik(){
 
 
 
-function searchbar(){
-  var users = document.getElementById('users').style;
-  var filtro = document.getElementById('filtri').style;
-  var content = document.getElementById('content').style;
-  var barra = document.getElementById('barra').style;
-  users.left = "100%";
-users.width = "0%";
-filtro.width = "20%";
-content.width = "80%";
-barra.width = "80%";
+function searchbaron(){
+document.getElementById('users').style.left = "100%";
+document.getElementById('users').style.width = "0%";
+document.getElementById('filtri').style.width = "20%";
+document.getElementById('content').style.width = "80%";
+document.getElementById('barra').style.width = "80%";
 }
 
 
