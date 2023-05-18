@@ -40,17 +40,22 @@ body{
     margin: 0px;
     overflow-x: hidden;
 }
-.top, .search{
+.top, .topsearch{
     background-color: var(--div-back);
     height: 5em;
     margin-bottom: 0.5em;
     z-index: 0;
     position: relative;
 }
-.top
+.top, .topsearch
 {
     display: flex;
     align-items: center;
+}
+.topsearch
+{
+    margin-bottom: 0.0em;
+    border-bottom: #ffffff 2px solid;
 }
 
 #title{
@@ -145,10 +150,11 @@ body{
     font-size: 15px;
     
 }
-.users {
+#users {
     margin-top: 2em;
     position: relative;
     /* left: 5em; */
+    opacity: 1;
     border-radius: 10px;
     width: 80%;
     left: 20%;
@@ -207,10 +213,14 @@ body{
 
 #filtri{
     height: 100%;
+    position: fixed;
     width: 0%;
+    border-right: 2px solid white;
 }#content{
     height: 100%;
     width: 100%;
+    background-color: #131212;
+
 }#barra{
     height: 7em;
     width: 100%;
@@ -218,7 +228,7 @@ body{
     flex-direction: row;
 
 }
-.searchbar{
+#searchbar{
     width: 80%;
     height: 50%;
     top: 25%;
@@ -226,10 +236,93 @@ body{
     left: 10%;
     border-radius: 10px;
     border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 
 }
-
-
+#inputbar{
+    width: 80%;
+    height: 100%;
+}
+.filtribar{
+    width: 20%;
+    height: 100%;
+    border-right: 3px solid white;
+}
 a{
     text-decoration: none;
+}   
+#ricercaticket{
+    
+ /* width: 70%; */
+/* height: 70em; */
+display: flex;
+opacity: 0;
+margin-left: 100%;
+flex-direction: column;
+align-items: flex-end;
+}
+.tutor{
+    height: 7em;
+    background: var(--background);
+    border-radius: 1em;
+    margin: 2em 0px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}.imgtutor {
+    height: 5em;
+    background: #191919;
+    width: 5em;
+    margin: 1em;
+    border-radius: 0.5em;
+}
+.infotutor{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.nometutor {
+    height: 2em;
+    width: 100%;
+    padding: 0.5em 1em 0em 0em;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.materiatutor {
+    height: 2em;
+    background: black;
+    width: 100%;
+    margin-top: 1em;
+}
+.profile{
+    width: 30%;
+    height: 60%;
+    margin: 2em;
+    margin-right: 0px;
+    border: 2px solid rgb(19, 218, 19);
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #26b439;
+    font-family: var(--font);
+}input[type="text"] ,input:focus-visible{
+    width: 99%;
+    height: 90%;
+    /* border-radius: 10px; */
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    border: 0px;
 }

@@ -364,13 +364,78 @@ function sito_tik(){
 
 
 
-function searchbaron(){
-document.getElementById('users').style.left = "100%";
-document.getElementById('users').style.width = "0%";
-document.getElementById('filtri').style.width = "20%";
-document.getElementById('content').style.width = "80%";
-document.getElementById('barra').style.width = "80%";
+function searchbaron(attivo){
+  var users = document.getElementById('users').style;
+  var filtro = document.getElementById('filtri').style;
+  var content = document.getElementById('content').style;
+  var barra = document.getElementById('barra').style;
+  var ricercaticket = document.getElementById('ricercaticket').style;
+  if (attivo==0){
+  users.left = "100%";
+  users.width = "0%";
+  users.opacity = "0";
+  users.height = "0%";
+  users.margin = "0px";
+  filtro.width = "20%";
+  ricercaticket.marginLeft = "0px";
+  ricercaticket.opacity = "1";
+  }
 }
+
+
+
+
+
+
+
+function searchAndHide() {
+  var inputText = document.getElementById("inputbar-input").value.toLowerCase().trim();
+  var materiaRadio = document.querySelector('input[name="materia"]:checked');
+  var selectedSubject = materiaRadio ? materiaRadio.value : "";
+
+  var divs = document.getElementsByClassName("tutor");
+  for (var i = 0; i < divs.length; i++) {
+    var div = divs[i];
+    var classNames = div.className.split(" ");
+    var hasMatch = false;
+
+    // Verifica corrispondenza per materia
+    var hasSelectedSubject = selectedSubject !== "";
+    var hasSubjectClass = classNames.includes(selectedSubject);
+
+    // Verifica corrispondenza per nome del tutor
+    var tutorName = div.querySelector(".nometutor").textContent.toLowerCase();
+    var hasNameMatch = true;
+    var inputTerms = inputText.split(" ");
+    for (var j = 0; j < inputTerms.length; j++) {
+      var term = inputTerms[j].trim();
+      if (!tutorName.includes(term)) {
+        hasNameMatch = false;
+        break;
+      }
+    }
+
+    if (
+      (!hasSelectedSubject || (hasSelectedSubject && hasSubjectClass)) &&
+      (!inputText || hasNameMatch)
+    ) {
+      hasMatch = true;
+    }
+
+    if (!hasMatch) {
+      div.style.display = "none";
+    } else {
+      div.style.display = "flex";
+    }
+  }
+}
+
+
+
+
+
+
+
 
 
 
