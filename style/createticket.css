@@ -1,0 +1,103 @@
+.ticket{
+    margin-top: 5%;
+    margin-bottom: 4%;
+    width: 60%;
+    height: 70%;
+    background-color: var(--div-back);;
+    border-radius: 5em;
+    position: relative;
+    left: 20em;
+}
+
+div.title2{
+    height: 30% !important;
+    width: 100% !important;
+    display: flex;
+    margin: 0px !important;
+    justify-content: center;
+    flex-direction: row;
+}
+
+p{
+    color: #fff;
+    margin: 20px 0px 0px 150px;
+    font-size: 20px;
+    font-family: var(--font)
+}
+.checkbox{
+    height: 5em;
+    padding-left: 15%;
+    padding-right: 1.5%;
+    display: flex;
+    position: relative;
+    top: 1em;
+    cursor: pointer;
+}
+#lunedì{
+    height: 45%;
+    width: 5%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+    background-color: #fff;
+}
+#martedì{
+    height: 45%;
+    width: 5%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+    background-color: #fff;
+}
+#mercoledì{
+    height: 45%;
+    width: 5%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+    background-color: #fff;
+}
+#giovedì{
+    height: 45%;
+    width: 5%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+    background-color: #fff;
+}
+#venerdì{
+    height: 45%;
+    width: 5%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+    background-color: #fff;
+}
+#sabato{
+    height: 45%;
+    width: 5%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+    background-color: #fff;
+}
+#domenica{
+    height: 45%;
+    width: 5%;
+    border: black solid 0.2em;
+    margin-right: 1%;
+    background-color: #fff;
+}
+#giorni{
+    margin: 0.1em 10% 0.1em 10%;
+    width: 80%;
+    left: 0.2em;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    right: 10%;
+    top: 3em;
+    font-family: var(--font);
+    font-size: 1em;
+}
+.basso{
+    width: 100%;
+    height: 10%;
+    background-color: blueviolet;
+    margin-top: 10%;
+    text-align: center;
+}
