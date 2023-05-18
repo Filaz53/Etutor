@@ -1,0 +1,83 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.inbox{
+    background-color: var(--div-back);
+    top: 2em;
+    height: 100%;
+    position: relative;
+}
+.cont{
+    position: relative;
+    top: 10%;
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+}
+.profilo_utente{
+    background-color: var(--background);
+    height: 18%;
+    width: 100%;
+    border-radius: 1em;
+    margin-bottom: 5%;
+}
+
+#profilo_utente{
+    background-image: url(../image/avatar.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 7%;
+    border: black solid 0.2em;
+    border-radius: 1em;
+    position: relative;
+    top: 15%;
+    margin-left: 1%;
+}
+
+#nome_utente{
+    position: relative;
+    top: -55%;
+    margin-left: 11%;
+    font-family: var(--font-title);
+    font-size: 1.8em;
+    color: #fff;
+}
+.bottoni{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    top: -65%;
+    margin-left: 60%;
+}
+
+#rifiuta{
+    text-transform: uppercase;
+    background-color: var(--div-back);
+    border: #37c42b solid 0.05em;
+    color: #fff;
+    border-radius: 0.3em;
+    font-family: var(--font-title);
+    font-size: 1.8em;
+    width: 35%;
+    height: 35%;
+    margin-right: 2%;
+    cursor: pointer;
+}
+#accetta{
+    text-transform: uppercase;
+    font-family: var(--font-title);
+    background-color: #37c42b;
+    border: var(--div-back) 0.05em solid;
+    font-size: 1.8em;
+    width: 35%;
+    height: 35%;
+    border-radius: 0.3em;
+    cursor: pointer;
+}

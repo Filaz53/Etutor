@@ -54,6 +54,7 @@ input{
     text-transform: uppercase;
     font-family: var(--font-title);
     font-size: 1.2em;
+    cursor: pointer;
 }
 h2{
     margin-bottom: 3%;
