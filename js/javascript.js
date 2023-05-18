@@ -347,6 +347,21 @@ function registervalidation(){
 
 
 
+function sito_f(){
+  window.open("https://www.facebook.com/login.php/", "_blank")
+}
+function sito_t(){
+  window.open("https://twitter.com/i/flow/login", "_blank");
+}
+function sito_i(){
+  window.open("https://www.instagram.com/", "_blank");
+}
+function sito_tik(){
+  window.open("https://www.tiktok.com/login", "_blank");
+}
+
+
+
 
 
 function searchbar(){
