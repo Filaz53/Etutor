@@ -36,29 +36,37 @@
             <div id="search">
                 <div id="filtri">
                     <div class="listafiltri">
-                        <div class="materia">
-                            <div id="matematica"><input type="radio" name="materia" value="matematica" oninput="searchAndHide()"> Matematica</div>
-                            <div id="inglese"><input type="radio" oninput="searchAndHide()" name="materia" value="inglese">Inglese</div>
-                            <div id="italiano"><input type="radio" oninput="searchAndHide()" name="materia">Italiano</div>
-                            <div id="informatica"><input type="radio" oninput="searchAndHide()" name="materia">informatica</div>
-                            <div id="tps"><input type="radio" oninput="searchAndHide()" name="materia">TPS</div>
-                            <div id="sistemi"><input type="radio" oninput="searchAndHide()" name="materia">Sistemi</div>
-                            <div id="storia"><input type="radio" oninput="searchAndHide()" name="materia">Storia</div>
-                            <div id="fisica"><input type="radio" oninput="searchAndHide()" name="materia">Fisica</div>
-                            <div id="chimica"><input type="radio" oninput="searchAndHide()" name="materia">Chimica</div>
-                            <div id="biologia"><input type="radio" oninput="searchAndHide()" name="materia">Biologia</div>
-                            <div id="automazione"><input type="radio" oninput="searchAndHide()" name="materia">Automazzione</div>
-
+                    <div class="materia">
+                        <div id="matematica"><input type="radio" name="materia" value="matematica" oninput="searchAndHide()"> Matematica</div>
+                        <div id="inglese"><input type="radio" oninput="searchAndHide()" name="materia" value="inglese">Inglese</div>
+                        <div id="italiano"><input type="radio" oninput="searchAndHide()" name="materia" value="italiano">Italiano</div>
+                        <div id="informatica"><input type="radio" oninput="searchAndHide()" name="materia" value="informatica">informatica</div>
+                        <div id="tps"><input type="radio" oninput="searchAndHide()" name="materia" value="tps">TPS</div>
+                        <div id="sistemi"><input type="radio" oninput="searchAndHide()" name="materia" value="sistemi">Sistemi</div>
+                        <div id="storia"><input type="radio" oninput="searchAndHide()" name="materia" value="storia">Storia</div>
+                        <div id="fisica"><input type="radio" oninput="searchAndHide()" name="materia" value="fisica">Fisica</div>
+                        <div id="chimica"><input type="radio" oninput="searchAndHide()" name="materia" value="chimica">Chimica</div>
+                        <div id="biologia"><input type="radio" oninput="searchAndHide()" name="materia" value="biologia">Biologia</div>
+                        <div id="automazione"><input type="radio" oninput="searchAndHide()" name="materia" value="automazione">Automazione</div>
+                    </div>
+                        <div id="areageografica-input">
+                            <input id="area_geografica_input" type="text" value="" placeholder="Bologna" oninput="searchAndHide()">
                         </div>
-                        <div class="areageografica">
-                            <input id="areageograficainput" type="text" value="" placeholder="Bologna">
+                        <div id="classe">
+                            <div id="classe1"><input type="checkbox" oninput="searchAndHide()" name="classe" value="prima">Classe 1</div>
+                            <div id="classe2"><input type="checkbox" oninput="searchAndHide()" name="classe" value="seconda">Classe 2</div>
+                            <div id="classe3"><input type="checkbox" oninput="searchAndHide()" name="classe" value="terza">Classe 3</div>
+                            <div id="classe4"><input type="checkbox" oninput="searchAndHide()" name="classe" value="quarta">Classe 4</div>
+                            <div id="classe5"><input type="checkbox" oninput="searchAndHide()" name="classe" value="quinta">Classe 5</div>
                         </div>
-                        <div class="classe">
-                            <div id="classe1"><input type="radio">Classe 1</div>
-                            <div id="classe2"><input type="radio">Classe 2</div>
-                            <div id="classe3"><input type="radio">Classe 3</div>
-                            <div id="classe4"><input type="radio">Classe 4</div>
-                            <div id="classe5"><input type="radio">Classe 5</div>
+                        <div id="giorniliberi-input">
+                            <div id="lunedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="lunedi">lunedi</div>
+                            <div id="martedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="martedi">martedi</div>
+                            <div id="mercoledi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="mercoledi">mercoledi</div>
+                            <div id="giovedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="giovedi">giovedi</div>
+                            <div id="venerdi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="venerdi">venerdi</div>
+                            <div id="sabato"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="sabato">sabato</div>
+                            <div id="domenica"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="domenica">domenica</div>
                         </div>
                     </div>
                 </div>
@@ -89,9 +97,10 @@
                         </div>
                 </div>
                 <div id="ricercaticket">
-                    <div id="tutor1" class="tutor francescosorghi inglese">
+                    <div id="tutor1" class="tutor francescosorghi inglese terza lunedi martedi venerdi malalbergo">
                         <div id="tutor1img" class="imgtutor"></div>
                         <div id="tutor1info" class="infotutor">
+                            <div id="tutor1areageografica" class="areageograficatutor malalbergo"></div>
                           <div id="tutor1nome" class="nometutor">Francesco Sorghi</div>
                           <div id="tutor1materia" class="materiatutor">Inglese</div>
                         </div>

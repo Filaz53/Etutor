@@ -388,28 +388,56 @@ function searchbaron(attivo){
 
 
 
+
+
+
+
+
+
+
 function searchAndHide() {
   var inputText = document.getElementById("inputbar-input").value.toLowerCase().trim();
   var materiaRadio = document.querySelector('input[name="materia"]:checked');
   var selectedSubject = materiaRadio ? materiaRadio.value : "";
+  var classeCheckboxes = document.querySelectorAll('input[name="classe"]:checked');
+  var selectedClasses = Array.from(classeCheckboxes).map(checkbox => checkbox.value);
+  var giornoCheckboxes = document.querySelectorAll('input[name="giorniliberi_inp"]:checked');
+  var selectedGiorni = Array.from(giornoCheckboxes).map(checkbox => checkbox.value);
+  var areaGeograficaInput = document.getElementById("area_geografica_input").value.toLowerCase().trim();
 
   var divs = document.getElementsByClassName("tutor");
   for (var i = 0; i < divs.length; i++) {
     var div = divs[i];
-    var classNames = div.className.split(" ");
     var hasMatch = false;
 
     // Verifica corrispondenza per materia
     var hasSelectedSubject = selectedSubject !== "";
-    var hasSubjectClass = classNames.includes(selectedSubject);
+    var hasSubjectClass = div.classList.contains(selectedSubject);
 
-    // Verifica corrispondenza per nome del tutor
-    var tutorName = div.querySelector(".nometutor").textContent.toLowerCase();
+    // Verifica corrispondenza per classi
+    var hasSelectedClasses = selectedClasses.length > 0;
+    var hasClass = selectedClasses.every(cls => div.classList.contains(cls));
+
+    // Verifica corrispondenza per giorni liberi
+    var hasSelectedGiorni = selectedGiorni.length > 0;
+    var hasGiorno = selectedGiorni.every(giorno => div.classList.contains(giorno));
+
+    // Verifica corrispondenza per area geografica
+    var hasAreaGeografica = areaGeograficaInput !== "";
+    var hasGeographicMatch = false;
+    if (hasAreaGeografica) {
+      var areageograficaTutor = div.querySelector(".areageograficatutor");
+      if (areageograficaTutor) {
+        hasGeographicMatch = areageograficaTutor.classList.contains(areaGeograficaInput);
+      }
+    }
+
+    // Verifica corrispondenza per classi del tutor
     var hasNameMatch = true;
     var inputTerms = inputText.split(" ");
     for (var j = 0; j < inputTerms.length; j++) {
       var term = inputTerms[j].trim();
-      if (!tutorName.includes(term)) {
+      if (!div.classList.contains(term)) {
         hasNameMatch = false;
         break;
       }
@@ -417,6 +445,9 @@ function searchAndHide() {
 
     if (
       (!hasSelectedSubject || (hasSelectedSubject && hasSubjectClass)) &&
+      (!hasSelectedClasses || (hasSelectedClasses && hasClass)) &&
+      (!hasSelectedGiorni || (hasSelectedGiorni && hasGiorno)) &&
+      (!hasAreaGeografica || (hasAreaGeografica && hasGeographicMatch)) &&
       (!inputText || hasNameMatch)
     ) {
       hasMatch = true;
@@ -429,8 +460,6 @@ function searchAndHide() {
     }
   }
 }
-
-
 
 
 
