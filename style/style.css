@@ -344,9 +344,9 @@ div#register {
     display: flex;
 }
 #form_reg{
-  border-radius: 3em;
   width: 30%;
   height: fit-content;
+  border-radius: 0.7em;
 }
 
 #my-dropdown{
@@ -391,7 +391,7 @@ div#login {
 }
 #form_log{
   height: 80%;
-  border-radius: 3em;
+  border-radius: 0.7em;
   width: fit-content;
 }
 
@@ -791,29 +791,33 @@ div.inputitem {
   top: 2em;
 
 }
-.infoAggiunte #h2{
+#infoAggiunte #h2{
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 2em;
+  font-family: var(--font);
   color: rgb(255, 255, 255);
+  width: 100%;
 }
 #p{
   font-size: 1.2em;
   text-transform: uppercase;
 }
-.infoAggiunte{
-  height: 30em;
-  background-image: url("../image/geometric.png");
-  background-position: center;
-  background-size: 100%;
-  position: relative;
-  margin-right: 0;
-}
-.infoAggiunte h2{
-  padding: 30px;
+#infoAggiunte h2{
   color: #fff;
 }
 .anno_classe, .zona_geografica, .sezione{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+}
+.anno_classe select, .zona_geografica select, .sezione select{
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--font);
+  font-size: 1em;
 }
 #ac{
   background-color: transparent;
@@ -827,7 +831,7 @@ div.inputitem {
   left: 0.9em;
   top: 0.4em;
   cursor: pointer;
-}
+} 
 
 
 #ind{
@@ -900,9 +904,6 @@ option{
 }
 .contenitore_dati{
   color:#fff;
-  padding: 0px 0px 0px 60px;
-  position: relative;
-  top: -2em;
 }
 .contenitore_dati label{
   padding-right: 10px; 
@@ -920,7 +921,7 @@ span#passw{
   z-index: 10;
   opacity: 0;
 }
-.Lpasswordbox:hover ~ span#passw, span#passw:hover{
+.passwordbox:hover > span#passw, span#passw:hover{
   display: block; 
   position: absolute;
   color: white;
@@ -929,8 +930,9 @@ span#passw{
   border-radius: 10px;
   font-weight: 100;
   font-size: 12;
-  top: 40%;
-  z-index: 10;
+
+  top: 70%;
+    z-index: 10;
   opacity: 1;
 }
 

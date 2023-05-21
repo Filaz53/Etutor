@@ -331,13 +331,6 @@ function validatePassword() {
 }
 
 
-var _PASSWORD = new String;
-var _EMAIL = new String;
-var _CLASSE = new String;
-var _
-var _
-
-
 
 
 function registervalidation(){
@@ -358,6 +351,43 @@ function registervalidation(){
 
 }
 
+
+function verificadatiaggiutivi(){
+  var comune = document.querySelector('#ind').value;
+  var anno = document.querySelector('#ac').value;
+  var sezione = document.querySelector('#sez').value;
+
+  if(comune == "non selezionato")
+  {
+    window.alert("seleziona tutti i campi prima di provare a registrarti");
+  }
+  else if(anno == "non selezionato")
+  {
+    window.alert("seleziona tutti i campi prima di provare a registrarti");
+  }else if(sezione == "non selezionato")
+  {
+    window.alert("seleziona tutti i campi prima di provare a registrarti");
+    }
+    else{
+      _ZONA_GEOGRAFICA = comune;
+      _CLASSE = anno;
+      _SEZIONE = sezione;
+      requestregister()
+    }
+
+}
+
+
+function infoaggiuntive(){
+  document.getElementById('tot').style.display = "block";
+  document.getElementById('infoAggiunte').style.opacity = "1";
+}
+function registercancel()
+{
+  document.getElementById('tot').style.display = "none";
+  document.getElementById('infoAggiunte').style.opacity = "0";
+
+}
 
 
 function sito_f(){
@@ -560,6 +590,38 @@ function toggleRadio(element) {
 
 
 
+/*REGISTRAZIONE*/
+
+var _USERNAME = new String;
+var _NOME = new String;
+var _COGNOME = new String;
+var _PASSWORD = new String;
+var _EMAIL = new String;
+var _CLASSE = new String;
+var _SEZIONE = new String;
+var _ZONA_GEOGRAFICA = new String;
+
+function requestregister() {
+  
+  var Param = "Username=" + _USERNAME + "&Nome=" + _NOME + "&email="+ _EMAIL +"&Password="+ _PASSWORD + "&Cognome=" + _COGNOME + "&anno_classe=" + _CLASSE + "&Sezione=" +_SEZIONE+ "zona_geografica"+_ZONA_GEOGRAFICA; 
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() { registerresponse(this); };
+      xhttp.open("POST","http://localhost:8080/ProgettoNSI/RegistrationServlet",true);
+      xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      xhttp.send(Param);	
+  
+}
+
+function registerresponse(e){
+
+	var x = JSON.parse(e.responseText);
+	if (e.status == 200){
+  var risultato = x.status-registration;
+
+	
+	console.log(risultato);
+	}
+}
 
 
 
@@ -591,19 +653,27 @@ function toggleRadio(element) {
 
 
 
-var _username = "";
+
+function usernamecreateREGISTER() {
+  const email = document.getElementById('emailregister').value;
+  const parts = email.split('@')[0].split('.');
+  _NOME = parts[0];
+  _COGNOME = parts[1];
+  _USERNAME= String(_NOME + _COGNOME);
+}
+
+
 function usernamecreate() {
     const email = document.getElementById('emaillogin').value;
     const parts = email.split('@')[0].split('.');
-    var nome = parts[0];
-    var cognome = parts[1];
-    var username = String(nome + cognome);
-    return { username };
+  _NOME = parts[0];
+  _COGNOME = parts[1];
+  _USERNAME= String(_NOME + _COGNOME);
+    
 }
-function requestlogin(_username){
-    _username = usernamecreate()
+function requestlogin(){
     savepass = document.getElementById('Lpassword').value;
-    var Param = "Username=" + _username + "&Password=" + savepass; 
+    var Param = "Username=" + _USERNAME + "&Password=" + savepass; 
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() { loginresponse(this); };
         xhttp.open("POST","http://localhost:8080/ProgettoNSI/LoginServlet",true);
@@ -612,6 +682,74 @@ function requestlogin(_username){
     }
     
 function loginresponse(e){
-	console.log(e.responseText);
+  console.log(e.responseText);
+	var x = JSON.parse(e.responseText);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*crea ticket*/
+
+var _GIORNILIBERI =new String
+
+const bottomDiv = document.querySelector('.bottom');
+
+const checkboxes = bottomDiv.querySelectorAll('input[type="checkbox"]');
+
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', updateSelectedDays);
+});
+
+// Funzione per aggiornare la stringa in base alla selezione delle checkbox
+function updateSelectedDays() {
+  // Array per memorizzare i giorni selezionati
+  const selectedDays = [];
+
+  // Iterare attraverso tutte le checkbox
+  checkboxes.forEach(checkbox => {
+    // Se una checkbox è selezionata, aggiungere il suo valore all'array
+    if (checkbox.checked) {
+      selectedDays.push(checkbox.value);
+    }
+  });
+
+  // Creare la stringa di giorni selezionati
+   _GIORNILIBERI = "Giorni Liberi:" + selectedDays.join(",");
+
+  // Stampare la stringa
+  console.log(_GIORNILIBERI);
+}

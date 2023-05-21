@@ -1,0 +1,14 @@
+.line{
+    position: relative;
+}
+.line:nth-child(1){
+    rotate: 45deg;
+    top: 17%;
+}
+.line:nth-child(2){
+    right: -2.5em;
+}
+.line:nth-child(3){
+    rotate: -45deg;
+    top: -15%;
+}

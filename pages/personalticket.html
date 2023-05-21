@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inbox</title>
+        <link rel="stylesheet" href="../style/darkmode.css">
+        <link rel="stylesheet" href="../style/main.css">
+        <link rel="stylesheet" href="../style/inbox.css">
+        <link rel="stylesheet" href="../style/personalticket.css">
+        <script src="../js/inbox.js"></script>
+    </head>
+
+    <body>
+        <div class="top">
+            <div id="title">
+                <span id="Eletronic">E</span><span>Tutor</span><span id="tutor"></span>
+            </div>
+            <div id="tutoract">
+                <a href="../pages/main.html"><span> HOME </span></a>
+            </div>
+            <div id="profile">
+                <div id="profileimage"></div>
+                <div id="username">
+                    <span>username</span>
+                </div>
+            </div>
+        </div>
+        <div id="crea" onclick="creaticketdiv()">+</div>
+        
+        <div id="tickettutor" onclick="window.location.href='personalticket.html'">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        
+        <div id="ricercaticket">
+            <div id="tutor1" class="tutor francescosorghi inglese terza lunedi martedi venerdi malalbergo">
+                <div id="tutor1info" class="infotutor">
+                  <div id="tutor1materia" class="materiatutor">Inglese</div>
+                </div>
+                <div id="tutor1accetta" class="accetta" onclick="rimuoviticket()">RIMUOVI</div>
+              </div>
+              
+        <div id="ticketadd" style="display: none;">
+            <div id="blur" onclick="closeticketdiv()"></div>
+            <div id="creaticket">
+                <div class="contenuto">
+                    <div class="title" onclick="createticket()">
+                        <div class="titletext">Crea ticket</div>
+                        <div id="creazione" class="creazione" >CONFERMA</div>
+
+                    </div>
+                    <div class="split">
+                        <div class="left">
+                            <div class="materia">    
+                                <div>Materia</div>
+                                <div >
+                                    <input type="text" id="materia" class="materiainputtext" placeholder="Es: Matematica">
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="right">        
+                            <div class="descrizione">
+                                <div class="descrizionetext">Descrizione</div>
+                                <div class="descrizioneinput">
+                                    <textarea style="max-width: 15em;max-height: 5em ;width: 15em;height: 5em; text-transform: uppercase;background-color: transparent;color: white;" type="text" id="descrizione" class="descrizioneinputtext" placeholder="es: Sono bravo nella progettazione di funzioni"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="bottom">
+                        <p id="label">Giorni Liberi</p>
+                        <div class="checkbox" style="display: flex; ">
+                            <div><input type="checkbox" value="lunedi" id="lunedì"  ><p class="giorni">Lun</p></div>
+                            <div><input type="checkbox" value="martedi" id="martedì" ><p class="giorni">Mar</p></div>
+                            <div><input type="checkbox" value="mercoledi" id="mercoledì" ><p class="giorni">Mer</p></div>
+                            <div><input type="checkbox" value="giovedi" id="giovedì" ><p class="giorni">Gio</p></div>
+                            <div><input type="checkbox" value="venerdi" id="venerdì" ><p class="giorni">Ven</p></div>
+                            <div><input type="checkbox" value="sabato" id="sabato" ><p class="giorni">Sab</p></div>
+                            <div><input type="checkbox" value="domenica" id="domenica" ><p class="giorni">Dom</p></div>
+                        </div>
+                    </div>
+                    
+            
+    
+                        
+    
+                                                
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
