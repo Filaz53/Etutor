@@ -4,17 +4,45 @@
         <title>Home</title>
         <link rel="stylesheet" href="../style/darkmode.css">
         <link rel="stylesheet" href="../style/main.css">
+        <link rel="stylesheet" href="../style/style_agg.css">
         <title>main page</title>
         <script src="../js/javascript.js"></script>
+        <script src="../js/main.js"></script>    
     </head>
     <body>
+        
+        <div id="menu" style="position: fixed; z-index: 10;right: 0px;opacity: 0;display: none;z-index: 10;width: 30%;">
+            <div class="color">
+                <div id="avatar">
+
+                </div>
+                <p id="user">${USER}</p>
+            </div>
+            <div id="text">
+                <span id="Matera_master">Materia Master: </span><span>Informatica</span>
+            </div>
+            <p id="label">Giorni Liberi</p>
+            <div class="checkbox">
+                <div><input type="checkbox" value="lunedi" id="lunedì" checked disabled><p class="giorni">Lun</p></div>
+                <div><input type="checkbox" value="martedi" id="martedì" disabled><p class="giorni">Mar</p></div>
+                <div><input type="checkbox" value="mercoledi" id="mercoledì" disabled><p class="giorni">Mer</p></div>
+                <div><input type="checkbox" value="giovedi" id="giovedì" disabled><p class="giorni">Gio</p></div>
+                <div><input type="checkbox" value="venerdi" id="venerdì" disabled><p class="giorni">Ven</p></div>
+                <div><input type="checkbox" value="sabato" id="sabato" disabled><p class="giorni">Sab</p></div>
+                <div><input type="checkbox" value="domenica" id="domenica" disabled><p class="giorni">Dom</p></div>
+                
+            </div>
+            <div class="but" style="cursor: none;">
+                <div id="ric_tutor"><span>richiedi tutor</span></div>
+            </div>
+       </div>
         <div class="container">
             <div class="top">
                 <div id="title">
                     <span id="Eletronic">E</span><span>Tutor</span><span id="tutor"></span>
                 </div>
                 <div id="tutoract">
-                    <a href="../pages/tutor.html"> <span > TUTOR </span></a>
+                    <a href="../pages/inbox.html"> <span > TUTOR </span></a>
                 </div>
                 <div id="profile">
                     <div id="profileimage"></div>
@@ -36,37 +64,54 @@
             <div id="search">
                 <div id="filtri">
                     <div class="listafiltri">
-                    <div class="materia">
-                        <div id="matematica"><input type="radio" name="materia" value="matematica" oninput="searchAndHide()"> Matematica</div>
-                        <div id="inglese"><input type="radio" oninput="searchAndHide()" name="materia" value="inglese">Inglese</div>
-                        <div id="italiano"><input type="radio" oninput="searchAndHide()" name="materia" value="italiano">Italiano</div>
-                        <div id="informatica"><input type="radio" oninput="searchAndHide()" name="materia" value="informatica">informatica</div>
-                        <div id="tps"><input type="radio" oninput="searchAndHide()" name="materia" value="tps">TPS</div>
-                        <div id="sistemi"><input type="radio" oninput="searchAndHide()" name="materia" value="sistemi">Sistemi</div>
-                        <div id="storia"><input type="radio" oninput="searchAndHide()" name="materia" value="storia">Storia</div>
-                        <div id="fisica"><input type="radio" oninput="searchAndHide()" name="materia" value="fisica">Fisica</div>
-                        <div id="chimica"><input type="radio" oninput="searchAndHide()" name="materia" value="chimica">Chimica</div>
-                        <div id="biologia"><input type="radio" oninput="searchAndHide()" name="materia" value="biologia">Biologia</div>
-                        <div id="automazione"><input type="radio" oninput="searchAndHide()" name="materia" value="automazione">Automazione</div>
-                    </div>
-                        <div id="areageografica-input">
-                            <input id="area_geografica_input" type="text" value="" placeholder="Bologna" oninput="searchAndHide()">
-                        </div>
-                        <div id="classe">
-                            <div id="classe1"><input type="checkbox" oninput="searchAndHide()" name="classe" value="prima">Classe 1</div>
-                            <div id="classe2"><input type="checkbox" oninput="searchAndHide()" name="classe" value="seconda">Classe 2</div>
-                            <div id="classe3"><input type="checkbox" oninput="searchAndHide()" name="classe" value="terza">Classe 3</div>
-                            <div id="classe4"><input type="checkbox" oninput="searchAndHide()" name="classe" value="quarta">Classe 4</div>
-                            <div id="classe5"><input type="checkbox" oninput="searchAndHide()" name="classe" value="quinta">Classe 5</div>
-                        </div>
-                        <div id="giorniliberi-input">
-                            <div id="lunedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="lunedi">lunedi</div>
-                            <div id="martedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="martedi">martedi</div>
-                            <div id="mercoledi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="mercoledi">mercoledi</div>
-                            <div id="giovedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="giovedi">giovedi</div>
-                            <div id="venerdi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="venerdi">venerdi</div>
-                            <div id="sabato"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="sabato">sabato</div>
-                            <div id="domenica"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="domenica">domenica</div>
+                        <div class="materia">
+                                            
+                            <label for="touch"><span style="border-radius: 1em 1em 0px 0px;">materie</span></label>
+                            <input type="checkbox" id="touch"> 
+                            <ul class="slide">
+                                <li><div id="matematica"><input type="radio" onclick="toggleRadio(this)" oninput="searchAndHide()" name="materia" value="matematica" oninput="searchAndHide()"> Matematica</div></li>
+                                <li><div id="inglese"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="inglese">Inglese</div></li>
+                                <li><div id="italiano"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="italiano">Italiano</div></li>
+                                <li><div id="informatica"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="informatica">informatica</div></li>
+                                <li><div id="tps"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="tps">TPS</div></li>
+                                <li><div id="sistemi"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="sistemi">Sistemi</div></li>
+                                <li><div id="storia"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="storia">Storia</div></li>
+                                <li><div id="fisica"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="fisica">Fisica</div></li>
+                                <li><div id="chimica"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="chimica">Chimica</div></li>
+                                <li><div id="biologia"><input type="radio" onclick="toggleRadio(this)"  oninput="searchAndHide()" name="materia" value="biologia">Biologia</div></li>
+                                <li><div id="automazione"><input type="radio" onclick="toggleRadio(this)" oninput="searchAndHide()" name="materia" value="automazione">Automazione</div></li>
+                                </ul>
+                            </div>
+                            <div class="classe">
+                                            
+                                <label for="touch2"><span>classe</span></label>               
+                                <input type="checkbox" id="touch2"> 
+                                <ul class="slide2">
+                                    <li><div id="classe1"><input type="checkbox" oninput="searchAndHide()" name="classe" value="prima">Classe 1</div></li>
+                                    <li><div id="classe2"><input type="checkbox" oninput="searchAndHide()" name="classe" value="seconda">Classe 2</div></li>
+                                    <li><div id="classe3"><input type="checkbox" oninput="searchAndHide()" name="classe" value="terza">Classe 3</div></li>
+                                    <li><div id="classe4"><input type="checkbox" oninput="searchAndHide()" name="classe" value="quarta">Classe 4</div></li>
+                                    <li><div id="classe5"><input type="checkbox" oninput="searchAndHide()" name="classe" value="quinta">Classe 5</div></li>
+                                    </ul>
+                                </div>
+                                <div class="giorniliberi">
+                                                
+                                    <label for="touch3"><span>classe</span></label>               
+                                    <input type="checkbox" id="touch3"> 
+                                    <ul class="slide3">
+                                        <li><div id="lunedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="lunedi">lunedi</div></li>
+                                        <li><div id="martedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="martedi">martedi</div></li>
+                                        <li><div id="mercoledi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="mercoledi">mercoledi</div></li>
+                                        <li><div id="giovedi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="giovedi">giovedi</div></li>
+                                        <li><div id="venerdi"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="venerdi">venerdi</div></li>
+                                        <li><div id="sabato"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="sabato">sabato</div></li>
+                                        <li><div id="domenica"><input type="checkbox" oninput="searchAndHide()" name="giorniliberi_inp" value="domenica">domenica</div></li>
+                                    </ul>
+                                </div>
+                                
+                            <div class="annullafiltri" onclick="resetFilters()">
+                                <span  style="border-radius: 0em 0em 1em 1em;"onclick="resetFilters()">ANNULLA FILTRI</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,39 +133,33 @@
                             <div class="studente" id="12"></div>
                             <div class="studente" id="13"></div>
                             <div class="studente" id="14"></div>
-                            <div class="studente" id="15"></div>
-                            <div class="studente" id="16"></div>
-                            <div class="studente" id="17"></div>
-                            <div class="studente" id="18"></div>
-                            <div class="studente" id="19"></div>
-                            <div class="studente" id="20"></div>
                         </div>
                 </div>
+                
                 <div id="ricercaticket">
-                    <div id="tutor1" class="tutor francescosorghi inglese terza lunedi martedi venerdi malalbergo">
+                    <div id="tutor1" class="tutor francescosorghi inglese terza lunedi martedi venerdi ">
                         <div id="tutor1img" class="imgtutor"></div>
                         <div id="tutor1info" class="infotutor">
-                            <div id="tutor1areageografica" class="areageograficatutor malalbergo"></div>
                           <div id="tutor1nome" class="nometutor">Francesco Sorghi</div>
                           <div id="tutor1materia" class="materiatutor">Inglese</div>
                         </div>
-                        <div id="tutor1profile" class="profile">PROFILO</div>
+                        <div id="tutor1profile" class="profile" onclick="profilotutor(1)">PROFILO</div>
                       </div>
-                    <div id="tutor2" class="tutor federicofilazzzola matematica">
+                    <div id="tutor2" class="tutor federicofilazzzola matematica terza quarta mercoledi domenica martedi">
                         <div id="tutor2img" class="imgtutor"></div>
                         <div id="tutor2info" class="infotutor">
                             <div id="tutor2nome" class="nometutor">Federico Filazzola</div>
-                            <div id="tutor2materia" class="materiatutor">MATERIA</div>
+                            <div id="tutor2materia" class="materiatutor">Matematica</div>
                         </div>
-                        <div id="tutor2profile" class="profile">PROFILO</div>
+                        <div id="tutor2profile" class="profile" onclick="profilotutor(2)">PROFILO</div>
                     </div>
-                    <div id="tutor3" class="tutor francesco sorghi inglese">
+                    <div id="tutor3" class="tutor giuseppesaliceti Informatica terza giovedi sabato">
                         <div id="tutor3img" class="imgtutor"></div>
                         <div id="tutor3info" class="infotutor">
-                            <div id="tutor3nome" class="nometutor">Nome</div>
-                            <div id="tutor3materia" class="materiatutor">MATERIA</div>
+                            <div id="tutor3nome" class="nometutor">Giuseppe Saliceti</div>
+                            <div id="tutor3materia" class="materiatutor">Informatica</div>
                         </div>
-                        <div id="tutor3profile" class="profile">PROFILO</div>
+                        <div id="tutor3profile" class="profile" onclick="profilotutor(3)">PROFILO</div>
                     </div>
                     <div id="tutor4" class="tutor">
                         <div id="tutor4img" class="imgtutor"></div>
@@ -128,7 +167,7 @@
                             <div id="tutor4nome" class="nometutor">Nome</div>
                             <div id="tutor4materia" class="materiatutor">MATERIA</div>
                         </div>
-                        <div id="tutor4profile" class="profile">PROFILO</div>
+                        <div id="tutor4profile" class="profile" onclick="profilotutor(4)">PROFILO</div>
                     </div>
                     <div id="tutor5" class="tutor">
                         <div id="tutor5img" class="imgtutor"></div>
@@ -136,7 +175,7 @@
                             <div id="tutor5nome" class="nometutor">Nome</div>
                             <div id="tutor5materia" class="materiatutor">MATERIA</div>
                         </div>
-                        <div id="tutor5profile" class="profile">PROFILO</div>
+                        <div id="tutor5profile" class="profile" onclick="profilotutor(5)">PROFILO</div>
                     </div>
                     <div id="tutor6" class="tutor">
                         <div id="tutor6img" class="imgtutor"></div>
@@ -144,7 +183,7 @@
                             <div id="tutor6nome" class="nometutor">Nome</div>
                             <div id="tutor6materia" class="materiatutor">MATERIA</div>
                         </div>
-                        <div id="tutor6profile" class="profile">PROFILO</div>
+                        <div id="tutor6profile" class="profile" onclick="profilotutor(6)">PROFILO</div>
                     </div>
                     <div id="tutor7" class="tutor">
                         <div id="tutor7img" class="imgtutor"></div>
@@ -152,7 +191,7 @@
                             <div id="tutor7nome" class="nometutor">Nome</div>
                             <div id="tutor7materia" class="materiatutor">MATERIA</div>
                         </div>
-                        <div id="tutor7profile" class="profile">PROFILO</div>
+                        <div id="tutor7profile" class="profile" onclick="profilotutor(7)">PROFILO</div>
                     </div>
                     <div id="tutor8" class="tutor">
                         <div id="tutor8img" class="imgtutor"></div>
@@ -160,7 +199,7 @@
                             <div id="tutor8nome" class="nometutor">Nome</div>
                             <div id="tutor8materia" class="materiatutor">MATERIA</div>
                         </div>
-                        <div id="tutor8profile" class="profile">PROFILO</div>
+                        <div id="tutor8profile" class="profile" onclick="profilotutor(8)">PROFILO</div>
                     </div>
                     <div id="tutor9" class="tutor">
                         <div id="tutor9img" class="imgtutor"></div>
@@ -168,7 +207,7 @@
                             <div id="tutor9nome" class="nometutor">Nome</div>
                             <div id="tutor9materia" class="materiatutor">MATERIA</div>
                         </div>
-                        <div id="tutor9profile" class="profile">PROFILO</div>
+                        <div id="tutor9profile" class="profile" onclick="profilotutor(9)">PROFILO</div>
                     </div>
                     <div id="tutor10" class="tutor">
                         <div id="tutor10img" class="imgtutor"></div>
@@ -176,12 +215,12 @@
                             <div id="tutor10nome" class="nometutor">Nome</div>
                             <div id="tutor10materia" class="materiatutor">MATERIA</div>
                         </div>
-                        <div id="tutor10profile" class="profile">PROFILO</div>
+                        <div id="tutor10profile" class="profile" onclick="profilotutor(10)">PROFILO</div>
                     </div>
                 </div>
             </div>
             </div>
                 <div class="bottom"></div>
-        </div>
+        </div>    
     </body>
 </html>

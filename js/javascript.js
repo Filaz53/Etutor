@@ -331,12 +331,25 @@ function validatePassword() {
 }
 
 
+var _PASSWORD = new String;
+var _EMAIL = new String;
+var _CLASSE = new String;
+var _
+var _
+
+
+
+
 function registervalidation(){
   var email= document.getElementById('emailregister').value;
 
   if(/@aldini\.istruzioneer\.it$/i.test(email))
   {
     if(validatePassword()){
+      _PASSWORD = document.getElementById("password").value;
+      _EMAIL = email;
+      infoaggiuntive()
+      //gestire le info
       
   }
   }
@@ -362,7 +375,42 @@ function sito_tik(){
 
 
 
+function resettotale(){
 
+
+  var filtersDiv = document.getElementById("filtri");
+  var checkboxes = filtersDiv.querySelectorAll('input[type="checkbox"]');
+  var radios = filtersDiv.querySelectorAll('input[type="radio"]');
+  
+  checkboxes.forEach(function (checkbox) {
+    checkbox.checked = false;
+  });
+  
+  radios.forEach(function (radio) {
+    radio.checked = false;
+  });
+
+
+}
+
+
+
+function resetFilters() {
+  searchAndHide(true);
+  resettotale();
+  setTimeout(resettotale, 1000);
+}
+
+
+
+
+var profilo=false;
+
+function profilotutor(tutorid){
+  profilo=true;
+  document.getElementById("menu").style.display = "block";
+  document.getElementById("menu").style.opacity = "1";
+}
 
 function searchbaron(attivo){
   var users = document.getElementById('users').style;
@@ -371,12 +419,14 @@ function searchbaron(attivo){
   var barra = document.getElementById('barra').style;
   var ricercaticket = document.getElementById('ricercaticket').style;
   if (attivo==0){
+  document.body.style.overflowY = "auto";
   users.left = "100%";
   users.width = "0%";
   users.opacity = "0";
   users.height = "0%";
   users.margin = "0px";
   filtro.width = "20%";
+  filtro.opacity = "1";
   ricercaticket.marginLeft = "0px";
   ricercaticket.opacity = "1";
   }
@@ -389,13 +439,8 @@ function searchbaron(attivo){
 
 
 
+function searchAndHide(reset) {
 
-
-
-
-
-
-function searchAndHide() {
   var inputText = document.getElementById("inputbar-input").value.toLowerCase().trim();
   var materiaRadio = document.querySelector('input[name="materia"]:checked');
   var selectedSubject = materiaRadio ? materiaRadio.value : "";
@@ -403,7 +448,12 @@ function searchAndHide() {
   var selectedClasses = Array.from(classeCheckboxes).map(checkbox => checkbox.value);
   var giornoCheckboxes = document.querySelectorAll('input[name="giorniliberi_inp"]:checked');
   var selectedGiorni = Array.from(giornoCheckboxes).map(checkbox => checkbox.value);
-  var areaGeograficaInput = document.getElementById("area_geografica_input").value.toLowerCase().trim();
+
+  if(reset){
+    document.getElementById("inputbar-input").value = "";
+    document.getElementById("inputbar-input").focus();
+    document.getElementById("inputbar-input").blur();
+  }
 
   var divs = document.getElementsByClassName("tutor");
   for (var i = 0; i < divs.length; i++) {
@@ -416,28 +466,18 @@ function searchAndHide() {
 
     // Verifica corrispondenza per classi
     var hasSelectedClasses = selectedClasses.length > 0;
-    var hasClass = selectedClasses.every(cls => div.classList.contains(cls));
+    var hasClass = selectedClasses.every(cls => div.classList.toString().includes(cls));
 
     // Verifica corrispondenza per giorni liberi
     var hasSelectedGiorni = selectedGiorni.length > 0;
     var hasGiorno = selectedGiorni.every(giorno => div.classList.contains(giorno));
-
-    // Verifica corrispondenza per area geografica
-    var hasAreaGeografica = areaGeograficaInput !== "";
-    var hasGeographicMatch = false;
-    if (hasAreaGeografica) {
-      var areageograficaTutor = div.querySelector(".areageograficatutor");
-      if (areageograficaTutor) {
-        hasGeographicMatch = areageograficaTutor.classList.contains(areaGeograficaInput);
-      }
-    }
 
     // Verifica corrispondenza per classi del tutor
     var hasNameMatch = true;
     var inputTerms = inputText.split(" ");
     for (var j = 0; j < inputTerms.length; j++) {
       var term = inputTerms[j].trim();
-      if (!div.classList.contains(term)) {
+      if (!div.classList.toString().includes(term)) {
         hasNameMatch = false;
         break;
       }
@@ -447,7 +487,6 @@ function searchAndHide() {
       (!hasSelectedSubject || (hasSelectedSubject && hasSubjectClass)) &&
       (!hasSelectedClasses || (hasSelectedClasses && hasClass)) &&
       (!hasSelectedGiorni || (hasSelectedGiorni && hasGiorno)) &&
-      (!hasAreaGeografica || (hasAreaGeografica && hasGeographicMatch)) &&
       (!inputText || hasNameMatch)
     ) {
       hasMatch = true;
@@ -472,6 +511,20 @@ function searchAndHide() {
 
 
 
+function toggleRadio(element) {
+  if (element.checked) {
+    // Deseleziona tutti gli altri input radio con lo stesso nome
+    var radios = document.getElementsByName(element.name);
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i] !== element) {
+        radios[i].checked = false;
+      }
+    }
+  } else {
+    // Deseleziona l'input radio se viene cliccato di nuovo
+    element.checked = false;
+  }
+}
 
 
 
@@ -553,16 +606,12 @@ function requestlogin(_username){
     var Param = "Username=" + _username + "&Password=" + savepass; 
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() { loginresponse(this); };
-        xhttp.open("POST","https://localhost/pj/Login",true);
+        xhttp.open("POST","http://localhost:8080/ProgettoNSI/LoginServlet",true);
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhttp.send(Param);	
     }
-function loginresponse(e)
-{
-	var x = JSON.parse(e.responseText);
-	if (e.status == 200){
-	var NOMEJson = x.Nome;
-	var COGNOMEJson = x.Cognome;
-	document.getElementById("Resp").innerHTML = NOMEJson +" "+  COGNOMEJson;
-	}
+    
+function loginresponse(e){
+	console.log(e.responseText);
 }
+

@@ -5,10 +5,10 @@ html{
 body{
     height: 100%;
 }
-.menu{
+#menu{
     float: right;
     font-family: var(--font-title);
-    width: 30%;
+    width: 20%;
     height: 100%;
     background-color: var(--div-back);
     border-left: black solid 0.5em;
@@ -29,7 +29,7 @@ body{
     background-image: url(../image/avatar.png);
     background-size: cover;
     height: 9em;
-    width: 8em;
+    width: 8.6em;
     background-repeat: no-repeat;
     position: relative;
     top: 1em;
@@ -51,84 +51,71 @@ body{
     font-size: 1.5em;
     color: white;
     margin: 1em 2em 0 0.5em;
-}
-.checkbox{
+}.checkbox {
     height: 6em;
     padding-left: 1.5%;
     padding-right: 1.5%;
     display: flex;
     position: relative;
     top: 1em;
-    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
-#lunedì{
-    height: 45%;
-    width: 13%;
-    border: black solid 0.2em;
-    margin-right: 1%;
-}
-#martedì{
-    height: 45%;
-    width: 13%;
-    border: black solid 0.2em;
-    margin-right: 1%;
-}
-#mercoledì{
-    height: 45%;
-    width: 13%;
-    border: black solid 0.2em;
-    margin-right: 1%;
-}
-#giovedì{
-    height: 45%;
-    width: 13%;
-    border: black solid 0.2em;
-    margin-right: 1%;
-}
-#venerdì{
-    height: 45%;
-    width: 13%;
-    border: black solid 0.2em;
-    margin-right: 1%;
-}
-#sabato{
-    height: 45%;
-    width: 13%;
-    border: black solid 0.2em;
-    margin-right: 1%;
-}
-#domenica{
-    height: 45%;
-    width: 13%;
-    border: black solid 0.2em;
-    margin-right: 1%;
-}
+.checkbox div{
+    width: calc(100% /7 );
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;}
 
-#giorni{
+    .checkbox div input{
+        width: 2.5em;
+        max-width: 2.5em;
+        height: 2.5em;
+}.giorni {
     margin: 0.1em 10% 0.1em 10%;
     width: 80%;
-    left: 0.2em;
+    /* left: 0.2em; */
+    /* text-align: center; */
     text-transform: uppercase;
     color: white;
     position: relative;
-    top: 3em;
+    /* top: 3em; */
     font-family: var(--font-title);
     font-size: 1em;
+    text-align: center;
 }
 
 #ric_tutor{
     height: 2.5em;
-    font-family: var(--font-title);
-    font-size: 1.3em;
+    font-family: var(--font);
+    font-size: 0.8em;
     margin: 0 20% 1em 20%;
+    color: #37c42b;
     width: 60%;
     position: relative;
-    top: 4em;
+    top: 30em;
     font-weight: lighter;
-    border: black solid 0.2em;
+    border: rgb(21, 255, 0) solid 0.1em;
     border-radius: 1em;
-    background: linear-gradient(90deg, rgba(122,145,122,1) 0%, rgba(14,68,16,0.854954481792717) 54%);
+    background: transparent;
     text-transform: uppercase;
+    cursor: pointer;
+}
+#ric_tutor span{
+    color: #37c42b;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    padding-top: 0.5em ;
 }
 
 /*-----Tutor-----*/
