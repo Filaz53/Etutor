@@ -5,7 +5,9 @@
         <link rel="stylesheet" href="../style/darkmode.css">
         <link rel="stylesheet" href="../style/main.css">
         <link rel="stylesheet" href="../style/inbox.css">
-        <script src="../js/inbox.js"></script>
+        <script src="../js/inbox.js"></script>        
+        <script src="../js/javascript.js"></script>
+
     </head>
 
     <body>
@@ -23,104 +25,54 @@
                 </div>
             </div>
         </div>
-        <div id="crea" onclick="creaticketdiv()">+</div>
 
         <div id="tickettutor" onclick="window.location.href='personalticket.html'">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
     </div>
+    <div id="ticketaccettati">
+        <h1 style="font-family: var(--font); color: white;">ACCETTATI</h1>
+        </div>
         <div id="ricercaticket">
-            <div id="tutor1" class="tutor francescosorghi inglese terza lunedi martedi venerdi malalbergo">
-                <div id="tutor1img" class="imgtutor"></div>
-                <div id="tutor1info" class="infotutor">
-                    <div id="tutor1areageografica" class="areageograficatutor"></div>
-                  <div id="tutor1nome" class="nometutor">Francesco Sorghi</div>
-                  <div id="tutor1materia" class="materiatutor">Inglese</div>
-                </div>
-                <div id="tutor1accetta" class="accetta" onclick="accetta(1)">ACCETTA</div>
-                <div id="tutor1rifiuta" class="rifiuta" onclick="rifiuta(1)">RIFIUTA</div>
-              </div>              
-            <div id="tutor2" class="tutor federicofilazzzola matematica">
+            <h1 style="font-family: var(--font); color: white;">IN LISTA</h1>
+            <div id="tutor2" class="tutor francescosorghi inglese terza lunedi martedi venerdi malalbergo">
                 <div id="tutor2img" class="imgtutor"></div>
                 <div id="tutor2info" class="infotutor">
-                    <div id="tutor2nome" class="nometutor">Federico Filazzola</div>
-                    <div id="tutor2materia" class="materiatutor">MATERIA</div>
+                    <div id="tutor2areageografica" class="areageograficatutor"></div>
+                  <div id="tutor2nome" class="nometutor">Francesco Sorghi</div>
+                  <div id="tutor2materia" class="materiatutor">Inglese</div>
                 </div>
                 <div id="tutor2accetta" class="accetta" onclick="accetta(2)">ACCETTA</div>
                 <div id="tutor2rifiuta" class="rifiuta" onclick="rifiuta(2)">RIFIUTA</div>
-            </div>
-            <div id="tutor3" class="tutor francesco sorghi inglese">
+              </div>              
+            <div id="tutor3" class="tutor federicofilazzzola matematica">
                 <div id="tutor3img" class="imgtutor"></div>
                 <div id="tutor3info" class="infotutor">
-                    <div id="tutor3nome" class="nometutor">Nome</div>
+                    <div id="tutor3nome" class="nometutor">Federico Filazzola</div>
                     <div id="tutor3materia" class="materiatutor">MATERIA</div>
                 </div>
                 <div id="tutor3accetta" class="accetta" onclick="accetta(3)">ACCETTA</div>
                 <div id="tutor3rifiuta" class="rifiuta" onclick="rifiuta(3)">RIFIUTA</div>
             </div>
-            <div id="tutor4" class="tutor">
+            <div id="tutor4" class="tutor francescosorghi inglese terza lunedi martedi venerdi malalbergo">
                 <div id="tutor4img" class="imgtutor"></div>
                 <div id="tutor4info" class="infotutor">
-                    <div id="tutor4nome" class="nometutor">Nome</div>
-                    <div id="tutor4materia" class="materiatutor">MATERIA</div>
+                    <div id="tutor4areageografica" class="areageograficatutor"></div>
+                  <div id="tutor4nome" class="nometutor">Francesco Sorghi</div>
+                  <div id="tutor4materia" class="materiatutor">Inglese</div>
                 </div>
                 <div id="tutor4accetta" class="accetta" onclick="accetta(4)">ACCETTA</div>
                 <div id="tutor4rifiuta" class="rifiuta" onclick="rifiuta(4)">RIFIUTA</div>
-            </div>
-            <div id="tutor5" class="tutor">
+              </div>              
+            <div id="tutor5" class="tutor federicofilazzzola matematica">
                 <div id="tutor5img" class="imgtutor"></div>
                 <div id="tutor5info" class="infotutor">
-                    <div id="tutor5nome" class="nometutor">Nome</div>
+                    <div id="tutor5nome" class="nometutor">Federico Filazzola</div>
                     <div id="tutor5materia" class="materiatutor">MATERIA</div>
                 </div>
                 <div id="tutor5accetta" class="accetta" onclick="accetta(5)">ACCETTA</div>
                 <div id="tutor5rifiuta" class="rifiuta" onclick="rifiuta(5)">RIFIUTA</div>
-            </div>
-            <div id="tutor6" class="tutor">
-                <div id="tutor6img" class="imgtutor"></div>
-                <div id="tutor6info" class="infotutor">
-                    <div id="tutor6nome" class="nometutor">Nome</div>
-                    <div id="tutor6materia" class="materiatutor">MATERIA</div>
-                </div>
-                <div id="tutor6accetta" class="accetta" onclick="accetta(6)">ACCETTA</div>
-                <div id="tutor6rifiuta" class="rifiuta" onclick="rifiuta(6)">RIFIUTA</div>
-            </div>
-            <div id="tutor7" class="tutor">
-                <div id="tutor7img" class="imgtutor"></div>
-                <div id="tutor7info" class="infotutor">
-                    <div id="tutor7nome" class="nometutor">Nome</div>
-                    <div id="tutor7materia" class="materiatutor">MATERIA</div>
-                </div>
-                <div id="tutor7accetta" class="accetta" onclick="accetta(7)">ACCETTA</div>
-                <div id="tutor7rifiuta" class="rifiuta" onclick="rifiuta(7)">RIFIUTA</div>
-            </div>
-            <div id="tutor8" class="tutor">
-                <div id="tutor8img" class="imgtutor"></div>
-                <div id="tutor8info" class="infotutor">
-                    <div id="tutor8nome" class="nometutor">Nome</div>
-                    <div id="tutor8materia" class="materiatutor">MATERIA</div>
-                </div>
-                <div id="tutor8accetta" class="accetta" onclick="accetta(8)">ACCETTA</div>
-                <div id="tutor8rifiuta" class="rifiuta" onclick="rifiuta(8)">RIFIUTA</div>
-            </div>
-            <div id="tutor9" class="tutor">
-                <div id="tutor9img" class="imgtutor"></div>
-                <div id="tutor9info" class="infotutor">
-                    <div id="tutor9nome" class="nometutor">Nome</div>
-                    <div id="tutor9materia" class="materiatutor">MATERIA</div>
-                </div>
-                <div id="tutor9accetta" class="accetta" onclick="accetta(9)">ACCETTA</div>
-                <div id="tutor9rifiuta" class="rifiuta" onclick="rifiuta(9)">RIFIUTA</div>
-            </div>
-            <div id="tutor10" class="tutor">
-                <div id="tutor10img" class="imgtutor"></div>
-                <div id="tutor10info" class="infotutor">
-                    <div id="tutor10nome" class="nometutor">Nome</div>
-                    <div id="tutor10materia" class="materiatutor">MATERIA</div>
-                </div>
-                <div id="tutor10accetta" class="accetta" onclick="accetta(10)">ACCETTA</div>
-                <div id="tutor10rifiuta" class="rifiuta" onclick="rifiuta(10)">RIFIUTA</div>
             </div>
         </div>
         <div id="ticketadd" style="display: none;">

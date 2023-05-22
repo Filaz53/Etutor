@@ -18,15 +18,15 @@ body{
 .color{
     border-bottom: black solid 0.5em;
     height: 9em;
-    background: linear-gradient(90deg, rgba(122,145,122,1) 0%, rgba(14,68,16,0.854954481792717) 54%);
+    background: linear-gradient(9deg, rgb(67, 102, 67) 0%, rgba(14,68,16,0.854954481792717) 90%);
 }
 
 #avatar{
     left: 0.8em;
     padding: 0.5em;
-    border-radius: 100%;
+    border-radius: 2em;
     border: black solid 0.5em;
-    background-image: url(../image/avatar.png);
+    background-color: rgb(31, 31, 31);
     background-size: cover;
     height: 9em;
     width: 8.6em;

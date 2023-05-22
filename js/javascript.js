@@ -341,6 +341,7 @@ function registervalidation(){
     if(validatePassword()){
       _PASSWORD = document.getElementById("password").value;
       _EMAIL = email;
+      usernamecreateREGISTER();
       infoaggiuntive()
       //gestire le info
       
@@ -434,13 +435,50 @@ function resetFilters() {
 
 
 
-var profilo=false;
+var profilo = false;
 
-function profilotutor(tutorid){
-  profilo=true;
-  document.getElementById("menu").style.display = "block";
-  document.getElementById("menu").style.opacity = "1";
+function profilotutor(tutorId) {
+  var tutorDiv = document.getElementById("tutor" + tutorId);
+
+  // Ottieni le informazioni del tutor
+  var nomeTutor = tutorDiv.querySelector(".nometutor").textContent;
+  var materiaTutor = tutorDiv.querySelector(".materiatutor").textContent;
+
+  // Ottieni i giorni liberi del tutor
+  var giorniLiberi = Array.from(tutorDiv.classList).filter(className => className.startsWith("giorno"));
+
+  // Sovrascrivi le informazioni nel div del menu
+  var menuDiv = document.getElementById("menu");
+  var userElement = menuDiv.querySelector("#user");
+  var materaMasterElement = menuDiv.querySelector("#Matera_master");
+  var checkboxDiv = menuDiv.querySelector(".checkbox");
+
+  // Sovrascrivi il nome utente
+  userElement.textContent = nomeTutor;
+
+  // Sovrascrivi la materia master
+  materaMasterElement.textContent = "Materia : " + materiaTutor;
+
+  // Sovrascrivi i giorni liberi
+  var giorniCheckboxes = checkboxDiv.querySelectorAll("input[type='checkbox']");
+  giorniCheckboxes.forEach(checkbox => {
+    var giornoValue = checkbox.value.toLowerCase();
+    var isChecked = giorniLiberi.includes("giorno" + giornoValue);
+    checkbox.checked = isChecked;
+    checkbox.disabled = true; // Abilita tutte le checkbox
+
+    // Controlla se il giorno libero è presente nelle classi del tutor
+  });
+
+  // Mostra il div del menu
+  menuDiv.style.display = "block";
+  menuDiv.style.opacity = "1";
 }
+
+
+
+
+
 
 function searchbaron(attivo){
   var filtro = document.getElementById('filtri').style;
@@ -608,6 +646,164 @@ function create_SOCIAL(){
 
 
 
+function usepersonal()
+{
+  document.getElementById('username').innerHTML = localStorage.getItem("NOME") + " " + localStorage.getItem("COGNOME");
+  document.getElementById('anno').innerHTML = localStorage.getItem("CLASSE")  + " " + localStorage.getItem("SEZIONE");
+  document.getElementById('email').innerHTML = localStorage.getItem("EMAIL");
+  document.getElementById('area_giografica').innerHTML = localStorage.getItem("ZONA_GEOGRAFICA");
+}
+
+
+
+
+
+
+// Funzione per salvare lo stato dei tutor accettati in localStorage
+function salvaStatoTutor() {
+  var tutorAccettati = document.getElementById("ticketaccettati").innerHTML;
+  var tutorInLista = document.getElementById("ricercaticket").innerHTML;
+  localStorage.setItem("statoTutorAccettati", tutorAccettati);
+  localStorage.setItem("statoTutorInLista", tutorInLista);
+}
+
+// Funzione per ripristinare lo stato dei tutor da localStorage
+function ripristinaStatoTutor() {
+  var tutorAccettati = localStorage.getItem("statoTutorAccettati");
+  var tutorInLista = localStorage.getItem("statoTutorInLista");
+  if (tutorAccettati) {
+    document.getElementById("ticketaccettati").innerHTML = tutorAccettati;
+  }
+  if (tutorInLista) {
+    document.getElementById("ricercaticket").innerHTML = tutorInLista;
+  }
+}
+
+// Esegui il ripristino dello stato dei tutor quando la pagina viene caricata
+window.addEventListener("load", ripristinaStatoTutor);
+
+// Funzione per verificare se un tutor è già presente in ticketaccettati
+function isTutorPresenteInAccettati(tutorId) {
+  var ticketaccettati = document.getElementById("ticketaccettati");
+  var tutorPresenti = ticketaccettati.getElementsByClassName("tutor");
+  for (var i = 0; i < tutorPresenti.length; i++) {
+    if (tutorPresenti[i].id === tutorId) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Funzione per verificare se un tutor è già presente in ricercaticket
+function isTutorPresenteInLista(tutorId) {
+  var ricercaticket = document.getElementById("ricercaticket");
+  var tutorPresenti = ricercaticket.getElementsByClassName("tutor");
+  for (var i = 0; i < tutorPresenti.length; i++) {
+    if (tutorPresenti[i].id === tutorId) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Funzione per gestire il click sul pulsante .accetta
+function accetta(numeroTutor) {
+  // Seleziona il tutor con l'ID corrispondente
+  var tutor = document.getElementById("tutor" + numeroTutor);
+
+  // Verifica se il tutor è già presente in ticketaccettati
+  if (isTutorPresenteInAccettati(tutor.id)) {
+    return;
+  }
+
+  // Rimuovi il pulsante .rifiuta
+  var pulsanteRifiuta = document.getElementById("tutor" + numeroTutor + "rifiuta");
+  pulsanteRifiuta.remove();
+
+  // Rimuovi il tutor dall'elemento padre corrente
+  var tutorParent = document.getElementById("ricercaticket");
+  tutorParent.removeChild(tutor);
+
+  // Aggiungi il tutor a #ticketaccettati
+  var ticketaccettati = document.getElementById("ticketaccettati");
+  ticketaccettati.appendChild(tutor);
+
+  // Sostituisci il pulsante .accetta con il pulsante .rimuovi
+  var pulsanteAccetta = document.getElementById("tutor" + numeroTutor + "accetta");
+  pulsanteAccetta.textContent = "RIMUOVI";
+  pulsanteAccetta.setAttribute("onclick", "rimuoviTutor(" + numeroTutor + ")");
+  pulsanteAccetta.classList.add("rimuovi");
+  pulsanteAccetta.classList.remove("rifiuta");
+  pulsanteAccetta.classList.remove("accetta");
+
+  // Salva lo stato dei tutor in localStorage
+  salvaStatoTutor();
+}
+
+// Funzione per gestire il click sul pulsante .rimuovi
+function rimuoviTutor(numeroTutor) {
+  // Seleziona il tutor con l'ID corrispondente
+  var tutor = document.getElementById("tutor" + numeroTutor);
+  tutor.remove();
+
+  // Salva lo stato dei tutor in localStorage
+  salvaStatoTutor();
+}
+
+
+
+// Funzione per gestire il click sul pulsante .rimuovi
+function rifiuta(numeroTutor) {
+  // Seleziona il tutor con l'ID corrispondente
+  var tutor = document.getElementById("tutor" + numeroTutor);
+  tutor.remove();
+
+  // Salva lo stato dei tutor in localStorage
+  salvaStatoTutor();
+}
+
+
+
+
+
+
+// Salva la funzione remove() in localStorage
+localStorage.setItem("removeFunction", remove.toString());
+
+
+
+// Funzione per inizializzare lo stato dei tutor dal localStorage
+function initTutor() {
+  const ticketAccettati = document.getElementById("ticketaccettati");
+  const ricercaticket = document.getElementById("ricercaticket");
+
+  // Verifica se esiste uno stato salvato nel localStorage per i tutor accettati
+  if (localStorage.getItem("statoTutorAccettati")) {
+    ticketAccettati.innerHTML = localStorage.getItem("statoTutorAccettati");
+  }
+
+  // Verifica se esiste uno stato salvato nel localStorage per i tutor in lista
+  if (localStorage.getItem("statoTutorInLista")) {
+    ricercaticket.innerHTML = localStorage.getItem("statoTutorInLista");
+  }
+
+  // Rimuovi i tutor già presenti in ticketaccettati da ricercaticket
+  var tutorAccettati = ticketAccettati.getElementsByClassName("tutor");
+  for (var i = 0; i < tutorAccettati.length; i++) {
+    var tutorId = tutorAccettati[i].id;
+    if (isTutorPresenteInLista(tutorId)) {
+      var tutorInLista = document.getElementById(tutorId);
+      tutorInLista.remove();
+    }
+  }
+}
+
+// Richiama la funzione di inizializzazione quando la pagina è pronta
+window.addEventListener("DOMContentLoaded", initTutor);
+
+
+
+
 
 
 
@@ -636,7 +832,6 @@ function create_SOCIAL(){
 
 
 /*REGISTRAZIONE*/
-
 var _USERNAME = new String;
 var _NOME = new String;
 var _COGNOME = new String;
@@ -645,59 +840,7 @@ var _EMAIL = new String;
 var _CLASSE = new String;
 var _SEZIONE = new String;
 var _ZONA_GEOGRAFICA = new String;
-
-function requestregister() {
-  
-  var Param = "Username=" + _USERNAME + "&Nome=" + _NOME + "&email="+ _EMAIL +"&Password="+ _PASSWORD + "&Cognome=" + _COGNOME + "&anno_classe=" + _CLASSE + "&Sezione=" +_SEZIONE+ "zona_geografica"+_ZONA_GEOGRAFICA; 
-      let xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() { registerresponse(this); };
-      xhttp.open("POST","http://localhost:8080/ProgettoNSI/RegistrationServlet",true);
-      xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-      xhttp.send(Param);	
-  
-}
-
-function registerresponse(e){
-
-	var x = JSON.parse(e.responseText);
-	if (e.status == 200){
-  var risultato = x.RegistrationStatus;
-
-	
-	console.log(risultato);
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var _ID = new String;
 
 function usernamecreateREGISTER() {
   const email = document.getElementById('emailregister').value;
@@ -714,42 +857,112 @@ function usernamecreate() {
   _NOME = parts[0];
   _COGNOME = parts[1];
   _USERNAME= String(_NOME + _COGNOME);
+  
+localStorage.setItem("NOME",_NOME);
+localStorage.setItem("COGNOME",_COGNOME);
+localStorage.setItem("USERNAME",_USERNAME);
+
     
 }
-function requestlogin(){
-    savepass = document.getElementById('Lpassword').value;
-    var Param = "Username=" + _USERNAME + "&Password=" + savepass; 
-        let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() { loginresponse(this); };
-        xhttp.open("POST","http://localhost:8080/ProgettoNSI/LoginServlet",true);
-        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhttp.send(Param);	
-    }
     
-function loginresponse(e){
-  console.log(e.responseText);
-	var x = JSON.parse(e.responseText);
-}
 
-
-
-
-
-
-
-function addSocial(){
-  savepass = document.getElementById('Lpassword').value;
+// REGISTER
+function requestregister() {
+  var Param = "username=" + _USERNAME + "&password="+ _PASSWORD +"&name=" + _NOME+ "&cognome=" + _COGNOME + "&email="+ _EMAIL  + "&anno_classe=" + _CLASSE + "&sezione=" +_SEZIONE+ "&zona_geografica="+_ZONA_GEOGRAFICA; 
       let xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() { loginresponse(this); };
-      xhttp.open("POST","http://localhost:8080/ProgettoNSI/LoginServlet",true);
+      xhttp.onreadystatechange = function() { registerresponse(this); };
+      xhttp.open("POST","http://localhost:8080/ProgettoNSI/RegistrationServlet",true);
       xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
       xhttp.send(Param);	
-  }
   
-function loginresponse(e){
-console.log(e.responseText);
-var x = JSON.parse(e.responseText);
+    localStorage.setItem("NOME",_NOME);
+    localStorage.setItem("COGNOME",_COGNOME);
+    localStorage.setItem("USERNAME",_USERNAME);
+    localStorage.setItem("PASSWORD",_PASSWORD);
+    localStorage.setItem("EMAIL",_EMAIL);
+    localStorage.setItem("CLASSE",_CLASSE);
+    localStorage.setItem("SEZIONE",_SEZIONE);
+    localStorage.setItem("ZONA_GEOGRAFICA",_ZONA_GEOGRAFICA);
+    localStorage.setItem("ID",_ID);
+
 }
+
+function registerresponse(e){
+var x = JSON.parse(e.responseText);
+console.log(x);
+  if (e.status == 200){
+  var risultato = x.statusregistration;
+
+  if (risultato == "success"){  
+    window.alert("eureca");
+  window.location.href= "pages/main.html";
+  }
+
+
+	
+	console.log(risultato);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+//LOGIN
+function responselogin(e){
+	
+	var x = JSON.parse(e.responseText);
+  if(x.LoginStatus == "password errata"){
+    alert("Password errata");
+  }
+	else if (e.status == 200){
+		_NOME = x.Nome;
+		_COGNOME = x.Cognome;
+		_ID = x.ID;
+		_USERNAME = x.Username;
+		_EMAIL = x.email;
+		_CLASSE = x.anno_classe;
+		_ZONA_GEOGRAFICA = x.zona_geografica;
+		_SEZIONE = x.Sezione;
+    localStorage.setItem("NOME",x.Nome);
+    localStorage.setItem("COGNOME",x.Cognome);
+    localStorage.setItem("ID",x.ID);
+    localStorage.setItem("USERNAME",x.Username);
+    localStorage.setItem("EMAIL",x.email);
+    localStorage.setItem("CLASSE",x.anno_classe);
+    localStorage.setItem("ZONA_GEOGRAFICA",x.zona_geografica);
+    localStorage.setItem("SEZIONE",x.Sezione);
+    
+    window.open("pages/main.html","_self");
+  }
+}
+
+
+
+function requestlogin(){
+  savepass = document.getElementById('Lpassword').value;
+  usernamecreate();
+  var Param = "Username=" + _USERNAME + "&Password=" + savepass; 
+	console.log(Param);
+	let xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() { responselogin(this); };
+	xhttp.open("POST","http://localhost:8080/ProgettoNSI/LoginServlet",true);
+	xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xhttp.send(Param);
+	
+	
+}
+
+
+
+
+
+
 
 
 

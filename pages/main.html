@@ -10,32 +10,87 @@
         <script src="../js/main.js"></script>    
     </head>
     <body>
-        
-        <div id="menu" style="position: fixed; z-index: 10;right: 0px;opacity: 0;display: none;z-index: 10;width: 30%;">
+        <div id="menu" style="position: fixed; z-index: 10; right: 0px; opacity: 0; display: none; width: 30%; z-index: 1000;">
             <div class="color">
-                <div id="avatar">
-
-                </div>
-                <p id="user">${USER}</p>
+              <div id="avatar"></div>
+              <p id="user">${USER}</p>
             </div>
             <div id="text">
-                <span id="Matera_master">Materia Master: </span><span>Informatica</span>
+              <span id="Matera_master">Materia : </span><span></span>
             </div>
             <p id="label">Giorni Liberi</p>
             <div class="checkbox">
-                <div><input type="checkbox" value="lunedi" id="lunedì" checked disabled><p class="giorni">Lun</p></div>
-                <div><input type="checkbox" value="martedi" id="martedì" disabled><p class="giorni">Mar</p></div>
-                <div><input type="checkbox" value="mercoledi" id="mercoledì" disabled><p class="giorni">Mer</p></div>
-                <div><input type="checkbox" value="giovedi" id="giovedì" disabled><p class="giorni">Gio</p></div>
-                <div><input type="checkbox" value="venerdi" id="venerdì" disabled><p class="giorni">Ven</p></div>
-                <div><input type="checkbox" value="sabato" id="sabato" disabled><p class="giorni">Sab</p></div>
-                <div><input type="checkbox" value="domenica" id="domenica" disabled><p class="giorni">Dom</p></div>
-                
+              <div>
+                <input type="checkbox" value="lunedi" id="lunedì" checked disabled>
+                <p class="giorni">Lun</p>
+              </div>
+              <div>
+                <input type="checkbox" value="martedi" id="martedi" disabled>
+                <p class="giorni">Mar</p>
+              </div>
+              <div>
+                <input type="checkbox" value="mercoledi" id="mercoledi" disabled>
+                <p class="giorni">Mer</p>
+              </div>
+              <div>
+                <input type="checkbox" value="giovedi" id="giovedi" disabled>
+                <p class="giorni">Gio</p>
+              </div>
+              <div>
+                <input type="checkbox" value="venerdi" id="venerdi" disabled>
+                <p class="giorni">Ven</p>
+              </div>
+              <div>
+                <input type="checkbox" value="sabato" id="sabato" disabled>
+                <p class="giorni">Sab</p>
+              </div>
+              <div>
+                <input type="checkbox" value="domenica" id="domenica" disabled>
+                <p class="giorni">Dom</p>
+              </div>
             </div>
             <div class="but" style="cursor: none;">
-                <div id="ric_tutor"><span>richiedi tutor</span></div>
+              <div id="ric_tutor" onclick="inviarichiestaticket()"><span>richiedi tutor</span></div>
             </div>
-       </div>
+            <ul class="social">
+              <li onclick="">
+                <a class="facebook" href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li onclick="">
+                <a class="twitter" href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li onclick="">
+                <a class="instagram" href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li onclick="">
+                <a class="telegram" href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <i class="fa fa-telegram" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         <div class="container">
             <div class="top"  >
                 <div id="title">
@@ -119,7 +174,7 @@
                     
                 
                 <div id="ricercaticket">
-                    <div id="tutor1" class="tutor francescosorghi inglese terza lunedi martedi venerdi ">
+                    <div id="tutor1" class="tutor francescosorghi inglese terza giornolunedi giornomartedi giornovenerdi ">
                         <div id="tutor1img" class="imgtutor"></div>
                         <div id="tutor1info" class="infotutor">
                           <div id="tutor1nome" class="nometutor">Francesco Sorghi</div>
@@ -127,7 +182,7 @@
                         </div>
                         <div id="tutor1profile" class="profile" onclick="profilotutor(1)">PROFILO</div>
                       </div>
-                    <div id="tutor2" class="tutor federicofilazzzola matematica terza quarta mercoledi domenica martedi">
+                    <div id="tutor2" class="tutor federicofilazzzola matematica terza quarta giornomartedi giornodomenica giornomercoledi">
                         <div id="tutor2img" class="imgtutor"></div>
                         <div id="tutor2info" class="infotutor">
                             <div id="tutor2nome" class="nometutor">Federico Filazzola</div>
@@ -135,7 +190,7 @@
                         </div>
                         <div id="tutor2profile" class="profile" onclick="profilotutor(2)">PROFILO</div>
                     </div>
-                    <div id="tutor3" class="tutor giuseppesaliceti informatica terza giovedi sabato">
+                    <div id="tutor3" class="tutor giuseppesaliceti informatica terza giornogiovedi giornosabato">
                         <div id="tutor3img" class="imgtutor"></div>
                         <div id="tutor3info" class="infotutor">
                             <div id="tutor3nome" class="nometutor">Giuseppe Saliceti</div>
@@ -143,80 +198,28 @@
                         </div>
                         <div id="tutor3profile" class="profile" onclick="profilotutor(3)">PROFILO</div>
                     </div>
-                    <div id="tutor4" class="tutor">
+                    <div id="tutor4" class="tutor cristianboldescu italiano quarta giornolunedi giornosabato giornomercoledi">
                         <div id="tutor4img" class="imgtutor"></div>
                         <div id="tutor4info" class="infotutor">
-                            <div id="tutor4nome" class="nometutor">Nome</div>
-                            <div id="tutor4materia" class="materiatutor">MATERIA</div>
+                            <div id="tutor4nome" class="nometutor">Cristian Boldescu</div>
+                            <div id="tutor4materia" class="materiatutor">Italiano</div>
                         </div>
                         <div id="tutor4profile" class="profile" onclick="profilotutor(4)">PROFILO</div>
                     </div>
-                    <div id="tutor5" class="tutor">
+                    <div id="tutor5" class="tutor seconda diegoippolito storia giornodmenica giornolunedi giorno mercoledi ">
                         <div id="tutor5img" class="imgtutor"></div>
                         <div id="tutor5info" class="infotutor">
-                            <div id="tutor5nome" class="nometutor">Nome</div>
-                            <div id="tutor5materia" class="materiatutor">MATERIA</div>
+                            <div id="tutor5nome" class="nometutor">Diego Ippolito</div>
+                            <div id="tutor5materia" class="materiatutor">Storia</div>
                         </div>
                         <div id="tutor5profile" class="profile" onclick="profilotutor(5)">PROFILO</div>
                     </div>
-                    <div id="tutor6" class="tutor">
-                        <div id="tutor6img" class="imgtutor"></div>
-                        <div id="tutor6info" class="infotutor">
-                            <div id="tutor6nome" class="nometutor">Nome</div>
-                            <div id="tutor6materia" class="materiatutor">MATERIA</div>
-                        </div>
-                        <div id="tutor6profile" class="profile" onclick="profilotutor(6)">PROFILO</div>
-                    </div>
-                    <div id="tutor7" class="tutor">
-                        <div id="tutor7img" class="imgtutor"></div>
-                        <div id="tutor7info" class="infotutor">
-                            <div id="tutor7nome" class="nometutor">Nome</div>
-                            <div id="tutor7materia" class="materiatutor">MATERIA</div>
-                        </div>
-                        <div id="tutor7profile" class="profile" onclick="profilotutor(7)">PROFILO</div>
-                    </div>
-                    <div id="tutor8" class="tutor">
-                        <div id="tutor8img" class="imgtutor"></div>
-                        <div id="tutor8info" class="infotutor">
-                            <div id="tutor8nome" class="nometutor">Nome</div>
-                            <div id="tutor8materia" class="materiatutor">MATERIA</div>
-                        </div>
-                        <div id="tutor8profile" class="profile" onclick="profilotutor(8)">PROFILO</div>
-                    </div>
-                    <div id="tutor9" class="tutor">
-                        <div id="tutor9img" class="imgtutor"></div>
-                        <div id="tutor9info" class="infotutor">
-                            <div id="tutor9nome" class="nometutor">Nome</div>
-                            <div id="tutor9materia" class="materiatutor">MATERIA</div>
-                        </div>
-                        <div id="tutor9profile" class="profile" onclick="profilotutor(9)">PROFILO</div>
-                    </div>
-                    <div id="tutor10" class="tutor">
-                        <div id="tutor10img" class="imgtutor"></div>
-                        <div id="tutor10info" class="infotutor">
-                            <div id="tutor10nome" class="nometutor">Nome</div>
-                            <div id="tutor10materia" class="materiatutor">MATERIA</div>
-                        </div>
-                        <div id="tutor10profile" class="profile" onclick="profilotutor(10)">PROFILO</div>
-                    </div>
-                </div>
+                    
             </div>
+                </div>
+                
             </div>
                 <div class="bottom"></div>
         </div>    
-            <footer style="
-    background-color: #161616;
-    padding: 20px;
-    text-align: center;
-    z-index: 100;
-    position: fixed;
-    bottom: -10px;
-    width: 100%;">
-                <p style="font-size: 14px; color: #c5c5c5;
-                border-top: 2px white solid;
-                padding: 1em;">Questo sito è stato sviluppato con passione da</p>
-                <p style="font-size: 16px; color: #ffffff;"><strong>Federico Filazzola</strong>, <strong>Richard Nwuachukwu</strong>, <strong>Cristian Boldescu</strong> e <strong>Massimiliano Tinti</strong></p>
-                <p style="font-size: 14px; color: #c5c5c5;">&copy; 2023 Tutti i diritti riservati.</p>
-              </footer>
     </body>
 </html>

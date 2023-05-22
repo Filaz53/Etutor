@@ -126,7 +126,7 @@ body *{
     z-index: 10;
 }
 
-#ricercaticket{
+#ricercaticket, #ticketaccettati, #ticket{
     /*filter: blur(0.2em);*/
    display: flex;
    opacity: 1;
@@ -146,7 +146,7 @@ body *{
     justify-content: center;
 }
 
-.rifiuta, .accetta{
+.rifiuta, .accetta , .rimuovi{
     width: 15%;
     height: 60%;
     margin: 2em;
@@ -160,14 +160,18 @@ body *{
     font-family: var(--font);
     
 }
-.rifiuta{
+.rifiuta, .rimuovi{
     color: red;
     border: 1px solid rgb(255, 0, 0)}
     
-.rifiuta:hover{
+.rifiuta:hover, .rimuovi:hover{
     background-color: red;
     color: white;
     border: 1px solid rgb(105, 4, 4)
+}
+.rimuovi{
+    
+    width: 30%;
 }
 .accetta:hover{
     background-color: #26b439;

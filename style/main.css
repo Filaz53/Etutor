@@ -260,7 +260,7 @@ body{
 a{
     text-decoration: none;
 }   
-#ricercaticket{
+#ricercaticket,  #ticketaccettati, #ticket{
     
  /* width: 70%; */
 /* height: 70em; */
@@ -270,7 +270,7 @@ margin-left: 0%;
 flex-direction: column;
 align-items: flex-end;
 }
-.tutor{
+.tutor, .ticket{
     height: 7em;
     background: var(--background);
     border-radius: 1em;
@@ -287,7 +287,7 @@ align-items: flex-end;
     margin: 1em;
     border-radius: 0.5em;
 }
-.infotutor{
+.infotutor,.infoticket{
     width: 50%;
     height: 80%;
     display: flex;
@@ -305,7 +305,7 @@ align-items: flex-end;
     font-weight: bold;
     text-transform: uppercase;
 }
-.materiatutor {
+.materiatutor, .materiaticket {
     height: 2em;
     width: 100%;
     margin-top: 1em;
@@ -451,3 +451,158 @@ li div {
     list-style: none;
     padding: 0px;
   }
+  
+ul {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 45%; */
+    /* transform: translate(-50%,-50%); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    ul li {
+      list-style:none;
+    }ul li a {
+        display: block;
+        position: relative;
+        width: 120%;
+        height: 10%;
+        line-height: 100px;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: none;
+        color: #404040;
+        scale: 0.6;
+        margin: 0 30px;
+        transition: .5s;
+    }
+    ul li a span {
+      position: absolute;
+      transition: transform .5s;
+    }
+    li{
+      margin: 5%;
+    }
+    ul li a span:nth-child(1),
+    ul li a span:nth-child(3){
+      width: 100%;
+      height: 3px;
+      background: #26b439;
+    }
+    ul li a span:nth-child(1) {
+      top:0;
+      left:0;
+      transform-origin: right;
+    }
+    ul li a:hover span:nth-child(1) {
+      transform: scaleX(0);
+      transform-origin: left;
+      transition:transform .5s;
+    }
+    
+    ul li a span:nth-child(3) {
+      bottom:0;
+      left:0;
+      transform-origin: left;
+    }
+    ul li a:hover span:nth-child(3) {
+      transform: scaleX(0);
+      transform-origin: right;
+      transition:transform .5s;
+    }
+    
+    ul li a span:nth-child(2),
+    ul li a span:nth-child(4){
+      width: 0.08em;
+      height: 100%;
+      background: rgb(23, 139, 39);
+    }
+    ul li a span:nth-child(2) {
+      top:0;
+      left:0;
+      transform:scale(0);
+      transform-origin: bottom;
+    }
+    ul li a:hover span:nth-child(2) {
+      transform: scale(1);
+      transform-origin: top;
+      transition:transform .5s;
+    }
+    ul li a span:nth-child(4) {
+      top:0;
+      right:0;
+      transform:scale(0);
+      transform-origin: top;
+    }
+    ul li a:hover span:nth-child(4) {
+      transform: scale(1);
+      transform-origin: bottom;
+      transition:transform .5s;
+    }
+    
+    .facebook:hover span { 
+      background: #3b5998;
+    }
+    .facebook{
+      background-image: url(../image/facebook-f.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40%;
+    }
+  
+    .twitter:hover {
+      color: #1da1f2;
+    }
+    .twitter:hover span { 
+      background: #1da1f2;
+    }
+  
+    .twitter{
+      background-image: url(../image/twitter.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+    }
+  
+    .instagram{
+      background-image: url(../image/instagram.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+    }
+  
+    .instagram:hover {
+      color: #c32aa3;
+    }
+    .instagram:hover span { 
+      background: #c32aa3;
+    }
+  
+    .telegram{
+      background-image: url(../image/512px-Telegram_font_awesome.svg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+    }
+  
+    .tiktok:hover {
+      color: #dd4b39;
+    }
+    .tiktok:hover span { 
+      background: #dd4b39;
+    }
+    ul li a .twitter {
+      color: #1da1f2;
+    }
+    ul li a:hover:nth-child(3) {
+      color: #c32aa3;
+    }
+    ul li a:hover:nth-child(4) {
+      color: #dd4b39;
+    }
+  ul{
+    padding: 0px;
+  }
+  
