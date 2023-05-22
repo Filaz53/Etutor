@@ -399,8 +399,8 @@ function sito_t(){
 function sito_i(){
   window.open("https://www.instagram.com/", "_blank");
 }
-function sito_tik(){
-  window.open("https://www.tiktok.com/login", "_blank");
+function sito_tel(){
+  window.HTMLInputElement("inserisci");
 }
 
 
@@ -443,25 +443,17 @@ function profilotutor(tutorid){
 }
 
 function searchbaron(attivo){
-  var users = document.getElementById('users').style;
   var filtro = document.getElementById('filtri').style;
-  var content = document.getElementById('content').style;
   var barra = document.getElementById('barra').style;
   var ricercaticket = document.getElementById('ricercaticket').style;
   if (attivo==0){
   document.body.style.overflowY = "auto";
-  users.left = "100%";
-  users.width = "0%";
-  users.opacity = "0";
-  users.height = "0%";
-  users.margin = "0px";
   filtro.width = "20%";
   filtro.opacity = "1";
   ricercaticket.marginLeft = "0px";
   ricercaticket.opacity = "1";
   }
 }
-
 
 
 
@@ -479,12 +471,6 @@ function searchAndHide(reset) {
   var giornoCheckboxes = document.querySelectorAll('input[name="giorniliberi_inp"]:checked');
   var selectedGiorni = Array.from(giornoCheckboxes).map(checkbox => checkbox.value);
 
-  if(reset){
-    document.getElementById("inputbar-input").value = "";
-    document.getElementById("inputbar-input").focus();
-    document.getElementById("inputbar-input").blur();
-  }
-
   var divs = document.getElementsByClassName("tutor");
   for (var i = 0; i < divs.length; i++) {
     var div = divs[i];
@@ -496,7 +482,7 @@ function searchAndHide(reset) {
 
     // Verifica corrispondenza per classi
     var hasSelectedClasses = selectedClasses.length > 0;
-    var hasClass = selectedClasses.every(cls => div.classList.toString().includes(cls));
+    var hasClass = selectedClasses.some(cls => div.classList.toString().includes(cls));
 
     // Verifica corrispondenza per giorni liberi
     var hasSelectedGiorni = selectedGiorni.length > 0;
@@ -540,7 +526,6 @@ function searchAndHide(reset) {
 
 
 
-
 function toggleRadio(element) {
   if (element.checked) {
     // Deseleziona tutti gli altri input radio con lo stesso nome
@@ -555,6 +540,66 @@ function toggleRadio(element) {
     element.checked = false;
   }
 }
+
+
+
+
+
+
+
+
+
+var _SOCIAL= new String;
+
+var telegram = "";
+var instagram = "";
+var facebook = "";
+var twitter = "";
+
+
+function sito_tele(){
+  var sito= prompt('nick del profilo telegram');
+  if (!sito==null) {
+    telegram=sito;
+}
+}
+
+function sito_t(){
+  var sito= prompt('nick del profilo twitter');
+  if (!sito==null) {
+    twitter=sito;
+    }
+    }
+
+function sito_i(){
+  var sito= prompt('nick del profilo instagram');
+  if (!sito==null) {
+    instagram=sito;
+    }
+    
+}
+
+function sito_f(){
+  var sito=prompt('nick del profilo facebook');
+  if(!sito==null){
+    facebook=sito;
+  }
+}
+
+function create_SOCIAL(){
+  _SOCIAL= "descrizione=Instagram:"+instagram+",Telegram:"+telegram+",Facebook:"+facebook+",Twitter:"+twitter;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -616,7 +661,7 @@ function registerresponse(e){
 
 	var x = JSON.parse(e.responseText);
 	if (e.status == 200){
-  var risultato = x.status-registration;
+  var risultato = x.RegistrationStatus;
 
 	
 	console.log(risultato);
@@ -692,7 +737,19 @@ function loginresponse(e){
 
 
 
-
+function addSocial(){
+  savepass = document.getElementById('Lpassword').value;
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() { loginresponse(this); };
+      xhttp.open("POST","http://localhost:8080/ProgettoNSI/LoginServlet",true);
+      xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      xhttp.send(Param);	
+  }
+  
+function loginresponse(e){
+console.log(e.responseText);
+var x = JSON.parse(e.responseText);
+}
 
 
 

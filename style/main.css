@@ -38,7 +38,6 @@ a{
 body{
     background-color: #131212;;
     margin: 0px;
-    overflow: hidden;
 }
 .top, .topsearch{
     background-color: var(--div-back);
@@ -212,16 +211,17 @@ body{
 }
 
 #filtri{
+    width: 20%;
     margin-top: 2em;
     height: fit-content;
     position: fixed;
-    width: 0%;
-    opacity: 0;
+    opacity: 1;
     border-right: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
 }#content{
     height: 10em;
     width: 100%;
@@ -265,8 +265,8 @@ a{
  /* width: 70%; */
 /* height: 70em; */
 display: flex;
-opacity: 0;
-margin-left: 100%;
+opacity: 1;
+margin-left: 0%;
 flex-direction: column;
 align-items: flex-end;
 }

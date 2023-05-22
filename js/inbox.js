@@ -12,3 +12,5 @@ function closeticketdiv(){
     document.getElementById('tickettutor').style.right = "1em";
     document.getElementById('ricercaticket').style.filter = "blur(0em)";
     }
+
+
