@@ -570,6 +570,10 @@ span#Eletronic{
   font-size: 1em;
 }
 
+li{
+  display: list-item;
+}
+
 #index a{
   text-decoration: none;
   color: #37c42b;
