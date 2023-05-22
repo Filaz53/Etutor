@@ -387,7 +387,7 @@ body{
   /* height: 95%; */
   width: 100%;
 }
-ul {
+ul#social{
   /* position: absolute; */
   /* top: 50%; */
   /* left: 45%; */
