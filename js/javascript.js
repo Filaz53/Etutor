@@ -811,6 +811,83 @@ window.addEventListener("DOMContentLoaded", initTutor);
 
 
 
+
+
+
+// Funzione per creare un nuovo ticket
+function createticket() {
+  var materia = document.getElementById("materia").value;
+  var ticketNumber = document.getElementById("ticket").childElementCount + 1;
+
+  var ticketHTML = `
+    <div id="ticket${ticketNumber}" class="ticket">
+      <div id="ticket${ticketNumber}info" class="infoticket">
+        <div id="ticket${ticketNumber}personal" class="materiaticket">${materia}</div>
+      </div>
+      <div id="ticket${ticketNumber}personal" class="rimuovi" onclick="rimuoviticket(${ticketNumber})">RIMUOVI</div>
+    </div>
+  `;
+
+  var ticketDiv = document.getElementById("ticket");
+  ticketDiv.insertAdjacentHTML("beforeend", ticketHTML);
+
+  // Salva lo stato dei ticket nel Local Storage dopo aver creato un nuovo ticket
+  salvaStatoTicket();
+}
+
+// Funzione per ripristinare lo stato dei ticket da Local Storage
+function ripristinaStatoTicket() {
+  var ticketHTML = localStorage.getItem("statoTicket");
+  if (ticketHTML) {
+    var ticketDiv = document.getElementById("ticket");
+    ticketDiv.innerHTML = ticketHTML;
+  }
+}
+
+// Funzione per salvare lo stato dei ticket in Local Storage
+function salvaStatoTicket() {
+  var ticketDiv = document.getElementById("ticket");
+  var ticketHTML = ticketDiv.innerHTML;
+  localStorage.setItem("statoTicket", ticketHTML);
+}
+
+// Ripristina lo stato dei ticket all'avvio della pagina
+window.addEventListener("DOMContentLoaded", function () {
+  ripristinaStatoTicket();
+});
+
+
+function rimuoviticket(ticketId) {
+  var ticketDiv = document.getElementById("ticket"+ticketId);
+  if (ticketDiv) {
+    ticketDiv.remove();
+    
+    // Salva lo stato dei ticket aggiornato nel Local Storage dopo la rimozione di un ticket
+    salvaStatoTicket();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *\ 
  *                                                                                                                                           *
  *                                                                                                                                           *
